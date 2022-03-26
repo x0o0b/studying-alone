@@ -319,6 +319,14 @@ table {
     margin: auto;
 }
 
+.table-background {
+    width: 80%;
+    max-width: 1000px;
+    margin: auto;
+    margin-bottom: 50px;
+    margin-top: -50px;
+}
+
 .table-box {
     background-color: #eee;
     width: 25%;
@@ -329,17 +337,11 @@ table {
 
 /* 1200px, 992px 768px 576px 자주 사용  */
 @media screen and (max-width: 1200px) {
-    .null {
-        clear: both;
-    }
     .table-box {
         width: 50%;
     }
 }
 @media screen and (max-width: 768px) {
-    .null2 {
-        clear: both;
-    }
     .table-box {
         width: 100%;
     }
