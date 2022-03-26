@@ -318,3 +318,29 @@ table {
     align-items:center;
     margin: auto;
 }
+
+.table-box {
+    background-color: #eee;
+    width: 25%;
+    padding: 30px;
+    text-align: center;
+    float: left;
+}
+
+/* 1200px, 992px 768px 576px 자주 사용  */
+@media screen and (max-width: 1200px) {
+    .null {
+        clear: both;
+    }
+    .table-box {
+        width: 50%;
+    }
+}
+@media screen and (max-width: 768px) {
+    .null2 {
+        clear: both;
+    }
+    .table-box {
+        width: 100%;
+    }
+}
