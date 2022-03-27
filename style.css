@@ -335,6 +335,48 @@ table {
     float: left;
 }
 
+.shop-bg {
+    background-color: #eee;
+    padding: 10px;
+}
+
+.shop-container {
+    display: flex;
+    width: 90%;
+    margin: auto;
+}
+
+.shop-item {
+    width: 33%;
+    padding: 10px;
+}
+
+.shop-item img {
+    width: 100%;
+    display: block;
+}
+
+.overlay {
+    position: absolute;
+    top: 440px;
+    color: white;
+    text-align: center;
+    width: 100%;
+    height: 50%;
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    transition: all 1s; 
+}
+
+.overlay h3 {
+    font-size: 40px;
+    margin-bottom: -5px;
+}
+.overlay:hover {
+    bottom: 440px;
+    opacity: 1;
+}
+
 /* 1200px, 992px 768px 576px 자주 사용  */
 @media screen and (max-width: 1200px) {
     .table-box {
