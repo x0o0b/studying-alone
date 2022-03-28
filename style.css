@@ -382,9 +382,56 @@ table {
 
 
 .shop123:hover > .overlay {
-    transform: translate(0px, -180px);
+    transform: translate(0px, -100%);
 }
 
+.back-ground{
+    width: 100%;
+    height: 500px;
+    background: linear-gradient(#87CEEB, #8c78ff);
+    
+}
+
+.bo-title{
+    padding: 50px; 
+    margin-left: 100px;
+    color: white;
+    float: left;
+}
+
+.bo-title h2{
+    font-size: 35px;
+}
+
+.bo-title p{
+    line-height: 5px;
+    
+}
+
+.bo-imgbox {
+    width: 350px;
+    height: 100%;
+    float: right;
+    margin-right: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.bo-img{
+    width: 100%;
+    height: 380.88px;
+}
+
+.bo-button {
+    
+    background-color: #444445;
+    font-size: 18px;
+    padding: 13px;
+    border: none;
+    border-radius: 5px;
+    color: white;
+}
 /* 1200px, 992px 768px 576px 자주 사용  */
 @media screen and (max-width: 1200px) {
     .table-box {
