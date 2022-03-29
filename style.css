@@ -460,7 +460,24 @@ table {
     float: left;
 }
 
+.img-container {
+    width: 100%;
+    
+}
 
+.bg-img {
+    width: 50%;
+    float: left;
+    position: relative;
+}
+
+.img-text {
+    position: absolute;
+    z-index: 1;
+    color: white;
+    top: 90px;
+    left: 20px;
+}
 
 /* 1200px, 992px 768px 576px 자주 사용  */
 @media screen and (max-width: 1200px) {
