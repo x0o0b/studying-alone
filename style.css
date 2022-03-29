@@ -327,14 +327,6 @@ table {
     margin-top: -50px;
 }
 
-.table-box {
-    background-color: #eee;
-    width: 25%;
-    padding: 30px;
-    text-align: center;
-    float: left;
-}
-
 .shop-bg {
     background-color: #eee;
     padding: 10px;
@@ -412,7 +404,7 @@ table {
     width: 350px;
     height: 100%;
     float: right;
-    margin-right: 200px;
+    margin-right: 100px;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
@@ -431,15 +423,59 @@ table {
     border: none;
     border-radius: 5px;
     color: white;
+    transition: all 0.5s; 
 }
+
+.bo-button:hover {
+    background-color: #eee;
+    color: #444445;
+}
+
+.Show-container {
+    width: 100%;
+    height: 300px;
+    text-align: center;
+    
+}
+
+.Show-text {
+    position: relative;
+    top: 60px;
+}
+
+.icon-bg {
+    width: 100%;
+    text-align: center;
+    background-color: #4e61c0;
+}
+
+.icon-bg h3 {
+    margin: 0px;
+}
+
+.table-box {
+    width: 25%;
+    padding: 30px;
+    text-align: center;
+    float: left;
+}
+
+
+
 /* 1200px, 992px 768px 576px 자주 사용  */
 @media screen and (max-width: 1200px) {
     .table-box {
         width: 50%;
     }
 }
-@media screen and (max-width: 768px) {
-    .table-box {
-        width: 100%;
+@media screen and (max-width: 992px) {
+    .back-ground{
+        height: 700px;
+    }
+
+    .bo-title {
+        margin: 0;
+        text-align: center;
+        clear: both;
     }
 }
