@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Sharp|Material+Icons+Filled|Material+Icons+Outlined');
+
+.material-icons.md-18 { font-size: 18px; }
+.material-icons.md-26 { font-size: 26px; }
+.material-icons.md-36 { font-size: 36px; }
+.material-icons.md-48 { font-size: 48px; }
+
+div, input, textarea nav{
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0px;
+}
+
+.nav-container {
+    width: 100%;
+    height: 60px;
+    border-bottom: solid 1px #dbdbdb;
+    
+}
+
+.nav-main {
+    width: 100%;
+    height: 100%;
+    padding: 10px 0px;
+    margin: 0px;
+    display: flex;
+    justify-content: center;
+}
+
+.nav-main i {
+    width: 60px;
+    height: 60px;
+}
+
+.insta-logo {
+    margin-top: 8px;
+    width: 333.5px;
+}
+
+.input {
+    margin-top: 2px;
+    width: 268px;
+    padding: 0px;
+    position: relative;
+}
+
+input::placeholder {color:#8e8e8e; font-weight: 100;}
+input::-webkit-input-placeholder {color:#8e8e8e; font-weight: 100;}
+input:-ms-input-placeholder {color:#8e8e8e; font-weight: 100;}
+
+.input span {
+    color: #8e8e8e;
+    position: absolute;
+    left: 11px;
+    bottom: 7px;
+}
+
+.inp{ 
+    box-sizing: border-box;
+    background-color: #efefef;
+    width: 100%;
+    height: 36px;
+    border: none;
+    border-radius: 8px;
+    padding: 0px 16px;
+}
+
+.icon {
+    margin-top: 8px;
+    width: 333.5px;
+    text-align: right;
+    
+}
+
+.icon span {
+    width: 38px;
+    height: 25px;
+    font-size: 27px;
+    text-align: right;
+}
+
+.profile {
+    width: 25px; 
+    height: 25px; 
+    border-radius: 25px;
+    margin-left: 18px;
+}
+
+
+
+
+.content-background {
+    width: 100%;
+    background-color: #fafafa;
+}
