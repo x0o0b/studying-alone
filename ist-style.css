@@ -88,10 +88,77 @@ input:-ms-input-placeholder {color:#8e8e8e; font-weight: 100;}
     margin-left: 18px;
 }
 
-
-
-
 .content-background {
     width: 100%;
     background-color: #fafafa;
+}
+
+.content {
+    margin:0 auto;
+    padding-top: 24px;
+    width: 935px;
+    text-align: center;
+    display: flex;
+}
+
+.main {
+    width: 612px;
+    height: 119px;
+    background-color: white;
+    border: solid 1px #dbdbdb;
+    padding: 16px 0px;
+    margin-bottom: 24px;
+}
+
+.story {
+    width: 100%;
+    height: 85px;
+    display: flex;
+}
+
+.story li {
+    list-style: none;
+    width: 10px;
+    height: 85px;
+}
+
+.story-profile {
+    width: 64px;
+    height: 84px;
+}
+
+.story-profile-img {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    border: 2px solid transparent;
+    background-image: linear-gradient(#fff, #fff), 
+    linear-gradient(to right, red 0%,  orange 100%);
+    background-origin: border-box;
+    background-clip: content-box, border-box;
+}
+
+.story-img {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    position: relative;
+    top: 2px;
+    border: solid 1px #dbdbdb;
+}
+
+.story-name {
+    margin-top: 7px;
+    font-size: 11px;
+    color: #8e8e8e;
+}
+
+.null {
+    width: 30px;
+}
+
+.side {
+    width: 293px;
+    height: 100px;
+    background-color: aqua;
 }
