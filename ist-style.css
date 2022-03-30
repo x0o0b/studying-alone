@@ -89,7 +89,7 @@ input:-ms-input-placeholder {color:#8e8e8e; font-weight: 100;}
 }
 
 .content-background {
-    width: 100%;
+    
     background-color: #fafafa;
 }
 
@@ -103,9 +103,13 @@ input:-ms-input-placeholder {color:#8e8e8e; font-weight: 100;}
 
 .main {
     width: 612px;
+}
+
+.story-bg {
     height: 119px;
     background-color: white;
     border: solid 1px #dbdbdb;
+    border-radius: 4px;
     padding: 16px 0px;
     margin-bottom: 24px;
 }
@@ -153,11 +157,50 @@ input:-ms-input-placeholder {color:#8e8e8e; font-weight: 100;}
     color: #8e8e8e;
 }
 
+.post-header {
+    margin-top: 24px;
+    width: 612px;
+    height: 70px;
+    background-color: white;
+    border: solid 1px #dbdbdb;
+    border-radius: 4px;
+    display: flex;
+    align-items: center
+}
+
+.post-header-profile {
+    width: 566px;
+    height: 70px;
+    padding: 14px 4px 14px 16px;
+    background-color: aqua;
+}
+
+.post-header-img {
+    width: 32px;
+    height: 42px;
+    display: flex;
+    align-items: center
+}
+
+.post-img {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+}
+
+.post-header-etc {
+    width: 48px;
+    height: 40px;
+    padding: 0px 8px 0px 0px;
+    line-height: 50px
+}
+
 .null {
     width: 30px;
 }
 
 .side {
+    margin-top: 30px;
     width: 293px;
     height: 100px;
     background-color: aqua;
