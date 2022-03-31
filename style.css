@@ -450,6 +450,7 @@ table {
     color: white;
 }
 
+
 .table-box {
     width: 25%;
     padding: 30px;
@@ -485,7 +486,7 @@ table {
 
 .img-container {
     width: 80%;
-    margin: 0 auto;
+    margin: auto;
     
 }
 
@@ -512,6 +513,10 @@ table {
 
 .bg-img:hover {
     border: solid 20px white;
+}
+
+.asdf {
+    overflow: hidden;
 }
 
 .img2 {
