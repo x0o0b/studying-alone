@@ -1,195 +1,414 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="ist-style.css">
-    <link rel="stylesheet" href="normalize.css">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="ist-style.css" />
+    <link rel="stylesheet" href="normalize.css" />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
     <title>Document</title>
-</head>
-<body>
+  </head>
+  <body>
     <nav class="nav-container">
-        <div class="nav-main">
-            
-                <div class="insta-logo">
-                    <img src="https://www.instagram.com/static/images/web/mobile_nav_type_logo.png/735145cfe0a4.png">
-                </div>
-
-                <div class="input">
-                    <form>
-                        <input type="text" placeholder="      검색" class="inp">
-                        <span class="material-icons">search</span>
-                    </form>
-                </div>
-
-                <div class="icon">
-                    <span class="material-icons">home</span>
-                    <span class="material-icons-outlined">send</span>
-                    <span class="material-icons-outlined">add_box</span>
-                    <span class="material-icons-outlined">explore</span>
-                    <span class="material-icons-outlined">favorite_border</span>
-                    <img src="img/profile.jpg" class="profile">
-                    
-                </div>   
+      <div class="nav-main">
+        <div class="insta-logo">
+          <img
+            src="https://www.instagram.com/static/images/web/mobile_nav_type_logo.png/735145cfe0a4.png"
+          />
         </div>
+
+        <div class="input">
+          <form>
+            <input type="text" placeholder="      검색" class="inp" />
+            <span class="material-icons">search</span>
+          </form>
+        </div>
+
+        <div class="icon">
+          <li class="material-icons">home</li>
+          <li class="material-icons-outlined">send</li>
+          <li class="material-icons-outlined">add_box</li>
+          <li class="material-icons-outlined">explore</li>
+          <li class="material-icons-outlined">favorite_border</li>
+          <img src="img/profile.jpg" class="profile" />
+        </div>
+      </div>
     </nav>
     <div class="content-background">
-        <section class="content">
-            <div class="main">
-                <div class="story-bg">
-                    <div class="story">
-                        <li></li>
-                        <div class="story-profile">
-                            <div class="story-profile-img">
-                                <img src="img/profile2.jpg" class="story-img">
-                            </div>
-                            <div class="story-name"><span>ryui.aehee</span></div>
-                        </div>
-                        <li></li>
-                        <div class="story-profile">
-                            <div class="story-profile-img">
-                                <img src="img/profile3.jpg" class="story-img2">
-                            </div>
-                            <div class="story-name"><span>doeylk_017</span></div>
-                        </div>
-                        <li></li>        
-                    </div>
+      <section class="content">
+        <div class="main">
+          <div class="story-bg">
+            <div class="story">
+              <li></li>
+              <div class="story-profile">
+                <div class="story-profile-img">
+                  <img src="img/profile2.jpg" class="story-img" />
                 </div>
-                <div class="post-header">
-                    <div class="post-header-profile">
-                        <div class="post-header-img">
-                            <img src="img/profile2.jpg" class="post-profile-img">
-                        </div>
-                        <div class="post-header-text">
-                                <div class="user-name pd2">
-                                    <span>ryui.aehee</span>
-                                </div>
-                                <div class="post-location pd2">
-                                    <span>칼바람나락</span> 
-                                </div>
-                        </div>
-                    </div>
-                    <div class="post-header-etc">
-                        <span class="material-icons-outlined">more_horiz</span>
-                    </div>
+                <div class="story-name"><span>ryui.aehee</span></div>
+              </div>
+              <li></li>
+              <div class="story-profile">
+                <div class="story-profile-img-none">
+                  <img src="img/profile3.jpg" class="story-img" />
                 </div>
-                <div class="post-img">
-                    <input type="radio" name="img-slide" id="slide01" checked>
-	                <input type="radio" name="img-slide" id="slide02">
-	                <input type="radio" name="img-slide" id="slide03">
-                    <input type="radio" name="img-slide" id="slide04">
-	                <input type="radio" name="img-slide" id="slide05">
-                    <div class="slidewrap">
-		                <ul class="slidelist">
-                            <li class="slideitem">
-                                <a>
-                                    <img src="img/post-img1.png">
-                                </a>
-                            </li>
-                            <li class="slideitem">
-                                <a>
-                                    <img src="img/post-img2.png">
-                                </a>
-                            </li>
-                            <li class="slideitem">
-                                <a>
-                                    <img src="img/post-img3.png">
-                                </a>
-                            </li>
-                            <li class="slideitem">
-                                <a>
-                                    <img src="img/post-img4.png">
-                                </a>
-                            </li>
-                            <li class="slideitem">
-                                <a>
-                                    <img src="img/post-img5.png">
-                                </a>
-                            </li>
-
-                            <div class="slide-control">
-                                <div>
-                                    <label for="slide02" class="right"></label>
-                                </div>
-                                <div>
-                                    <label for="slide01" class="left"></label>
-                                    <label for="slide03" class="right"></label>
-                                </div>
-                                <div>
-                                    <label for="slide02" class="left"></label>
-                                    <label for="slide04" class="right"></label>
-                                </div>
-                                <div>
-                                    <label for="slide03" class="left"></label>
-                                    <label for="slide05" class="right"></label>
-                                </div>
-                                <div>
-                                    <label for="slide04" class="left"></label>
-                                </div>
-                            </div>
-                        </ul>
-                        <ul class="slide-pagelist">
-                            <li><label for="slide01"></label></li>
-                            <li><label for="slide02"></label></li>
-                            <li><label for="slide03"></label></li>
-                            <li><label for="slide04"></label></li>
-                            <li><label for="slide05"></label></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="post-content">
-                    <div class="post-content-section"></div>
-                    <div class="post-content-comment">
-                        <div class="heart"></div>   
-                        <div class="user-writing">
-                            <span class="user-name">ryui.aehee</span>
-                            <span class="blank"></span>
-                            <span>롤하다가 6년 선배 만났다</span>
-                        </div>
-                        <div class="comment-more">
-                            <span>댓글 10개 모두 보기</span>
-                        </div>
-                        <div class="comment">
-                            <div class="comment-text">
-                                <span class="user-name">deopa1110</span>
-                                <span class="blank"></span>
-                                <span>아니 시바 ㅋㅋㅋㅋㅋㅋ</span>
-                            </div>
-                            <div class="ft12">
-                                <span class="material-icons">
-                                    favorite_border
-                                </span>
-                            </div>
-                        </div>
-                        <div class="comment">
-                            <div class="comment-text">
-                                <span class="user-name">ryuj.aehee</span>
-                                <span class="blank"></span>
-                                <span class="user-tag">@deop0a111</span>
-                                <span>ㄹㄱㄴ</span>
-                            </div>
-                            <div class="ft12">
-                                <span class="material-icons">
-                                    favorite_border
-                                </span>
-                            </div>
-                        </div>
-                        <div class="post-time">
-                            <span>12시간 전</span>
-                        </div>
-                        <!-- 줄간 간격 마추기 -->
-                    </div>
-                </div>
-                <div class="post-footer"></div>
-                <!-- 댓글쓰는곳 만들기 -->
+                <div class="story-name-none"><span>doeylk_017</span></div>
+              </div>
+              <li></li>
             </div>
-            <div class="null"></div>
-            <div class="side"></div>
-            <!-- 사이드 만들기 -->
-        </section>
-        
+          </div>
+          <div class="post-header">
+            <div class="post-header-profile">
+              <div class="post-profile-img-box">
+                <div class="post-header-img">
+                  <img src="img/profile2.jpg" class="post-profile-img" />
+                </div>
+              </div>
+
+              <div class="post-header-text">
+                <div class="user-name pd2">
+                  <span>ryui.aehee</span>
+                </div>
+                <div class="post-location pd2">
+                  <span>칼바람나락</span>
+                </div>
+              </div>
+            </div>
+            <div class="post-header-etc">
+              <span class="material-icons-outlined">more_horiz</span>
+            </div>
+          </div>
+          <div class="post-img">
+            <input type="radio" name="img-slide" id="slide01" checked />
+            <input type="radio" name="img-slide" id="slide02" />
+            <input type="radio" name="img-slide" id="slide03" />
+            <input type="radio" name="img-slide" id="slide04" />
+            <input type="radio" name="img-slide" id="slide05" />
+            <div class="slidewrap">
+              <ul class="slidelist">
+                <li class="slideitem">
+                  <a>
+                    <img src="img/post-img11.png" />
+                  </a>
+                </li>
+                <li class="slideitem">
+                  <a>
+                    <img src="img/post-img12.png" />
+                  </a>
+                </li>
+                <li class="slideitem">
+                  <a>
+                    <img src="img/post-img13.png" />
+                  </a>
+                </li>
+                <li class="slideitem">
+                  <a>
+                    <img src="img/post-img14.png" />
+                  </a>
+                </li>
+                <li class="slideitem">
+                  <a>
+                    <img src="img/post-img15.png" />
+                  </a>
+                </li>
+
+                <div class="slide-control">
+                  <div>
+                    <label for="slide02" class="right"></label>
+                  </div>
+                  <div>
+                    <label for="slide01" class="left"></label>
+                    <label for="slide03" class="right"></label>
+                  </div>
+                  <div>
+                    <label for="slide02" class="left"></label>
+                    <label for="slide04" class="right"></label>
+                  </div>
+                  <div>
+                    <label for="slide03" class="left"></label>
+                    <label for="slide05" class="right"></label>
+                  </div>
+                  <div>
+                    <label for="slide04" class="left"></label>
+                  </div>
+                </div>
+              </ul>
+              <div class="slide-pagelist">
+                <div class="post-icon-box">
+                  <div class="post-icon">
+                    <span class="material-icons-outlined">favorite_border</span>
+                  </div>
+                  <div class="post-icon">
+                    <span class="material-icons-outlined">mode_comment</span>
+                  </div>
+                  <div class="post-icon">
+                    <span class="material-icons-outlined">send</span>
+                  </div>
+                </div>
+                <li><label for="slide01"></label></li>
+                <li><label for="slide02"></label></li>
+                <li><label for="slide03"></label></li>
+                <li><label for="slide04"></label></li>
+                <li><label for="slide05"></label></li>
+                <div class="post-icon-box2">
+                  <div class="post-icon2">
+                    <span class="material-icons-outlined">bookmark_border</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="post-content">
+            <div class="post-content-comment">
+              <div class="heart">
+                <div class="heart-img-box">
+                  <img src="img/profile3.jpg" class="heart-img" />
+                </div>
+                <div class="heart-text-box">
+                  <div class="heart-text">
+                    <span class="user-name">doeylk_017</span
+                    ><!--
+                                    -->님
+                    <span class="user-name">외 5,465,345,342,257명</span
+                    ><!--
+                                    -->이 좋아합니다
+                  </div>
+                </div>
+              </div>
+              <div class="user-writing">
+                <span class="user-name">ryui.aehee</span>
+                <span class="blank"></span>
+                <span>롤하다가 6년 선배 만났다</span>
+              </div>
+              <div class="comment-more">
+                <span>댓글 6,024,272,361개 모두 보기</span>
+              </div>
+              <div class="comment-box">
+                <div class="comment">
+                  <div class="comment-text">
+                    <span class="user-name">deopa1110</span>
+                    <span class="blank"></span>
+                    <span>아니 시바 ㅋㅋㅋㅋㅋㅋ</span>
+                  </div>
+                  <div class="ft12">
+                    <span class="material-icons"> favorite_border </span>
+                  </div>
+                </div>
+                <div class="comment">
+                  <div class="comment-text">
+                    <span class="user-name">ryuj.aehee</span>
+                    <span class="blank"></span>
+                    <span class="user-tag">@deop0a111</span>
+                    <span>ㄹㄱㄴ</span>
+                  </div>
+                  <div class="ft12">
+                    <span class="material-icons"> favorite_border </span>
+                  </div>
+                </div>
+              </div>
+              <div class="post-time">
+                <span>5분 전</span>
+              </div>
+            </div>
+          </div>
+          <div class="post-footer">
+            <form class="footer-box">
+              <div class="post-icon">
+                <span class="material-icons-outlined">
+                  sentiment_satisfied
+                </span>
+              </div>
+              <textarea
+                class="footer-text"
+                placeholder="댓글 달기..."
+              ></textarea>
+              <div class="send"><span>게시</span></div>
+            </form>
+          </div>
+        </div>
+        <div class="null"></div>
+        <aside class="side">
+          <div class="aside-profile">
+            <div class="aside-profile-img">
+              <img src="img/profile.jpg" />
+            </div>
+            <div class="aside-profile-name">
+              <div class="aside-profile-text">
+                <span class="user-name">hoseon_05</span>
+              </div>
+            </div>
+            <div class="aside-profile-transform">
+              <div style="display: inline-block">
+                <span class="aside-profile-transform-text">전환</span>
+              </div>
+            </div>
+          </div>
+          <div class="aside-recommend">
+            <nav class="aside-recommend-nav">
+              <div class="aside-recommend-nav-text">
+                <span>회원님을 위한 추천</span>
+              </div>
+              <div class="aside-recommend-nav-viewall">
+                <span>모두 보기</span>
+              </div>
+            </nav>
+            <div class="aside-recommend-list">
+              <div class="aside-user">
+                <div class="aside-user-img">
+                  <img src="img/profile4.jpg" />
+                </div>
+                <div class="aside-user-text">
+                  <div class="user-name-box">
+                    <span class="user-name">ansqjatj</span>
+                  </div>
+                  <div class="user-explanation-box">
+                    <span class="user-explanation">회원님을 팔로우합니다</span>
+                  </div>
+                </div>
+                <div class="aside-user-follow">
+                  <div style="display: inline-block">
+                    <span class="aside-profile-transform-text">팔로우</span>
+                  </div>
+                </div>
+              </div>
+              <div class="aside-user">
+                <div class="aside-user-img">
+                  <img src="img/profile4.jpg" />
+                </div>
+                <div class="aside-user-text">
+                  <div class="user-name-box">
+                    <span class="user-name">ansqjatj</span>
+                  </div>
+                  <div class="user-explanation-box">
+                    <span class="user-explanation">회원님을 팔로우합니다</span>
+                  </div>
+                </div>
+                <div class="aside-user-follow">
+                  <div style="display: inline-block">
+                    <span class="aside-profile-transform-text">팔로우</span>
+                  </div>
+                </div>
+              </div>
+              <div class="aside-user">
+                <div class="aside-user-img">
+                  <img src="img/profile4.jpg" />
+                </div>
+                <div class="aside-user-text">
+                  <div class="user-name-box">
+                    <span class="user-name">ansqjatj</span>
+                  </div>
+                  <div class="user-explanation-box">
+                    <span class="user-explanation">회원님을 팔로우합니다</span>
+                  </div>
+                </div>
+                <div class="aside-user-follow">
+                  <div style="display: inline-block">
+                    <span class="aside-profile-transform-text">팔로우</span>
+                  </div>
+                </div>
+              </div>
+              <div class="aside-user">
+                <div class="aside-user-img">
+                  <img src="img/profile4.jpg" />
+                </div>
+                <div class="aside-user-text">
+                  <div class="user-name-box">
+                    <span class="user-name">ansqjatj</span>
+                  </div>
+                  <div class="user-explanation-box">
+                    <span class="user-explanation">회원님을 팔로우합니다</span>
+                  </div>
+                </div>
+                <div class="aside-user-follow">
+                  <div style="display: inline-block">
+                    <span class="aside-profile-transform-text">팔로우</span>
+                  </div>
+                </div>
+              </div>
+              <div class="aside-user">
+                <div class="aside-user-img">
+                  <img src="img/profile4.jpg" />
+                </div>
+                <div class="aside-user-text">
+                  <div class="user-name-box">
+                    <span class="user-name">ansqjatj</span>
+                  </div>
+                  <div class="user-explanation-box">
+                    <span class="user-explanation">회원님을 팔로우합니다</span>
+                  </div>
+                </div>
+                <div class="aside-user-follow">
+                  <div style="display: inline-block">
+                    <span class="aside-profile-transform-text">팔로우</span>
+                  </div>
+                </div>
+              </div>
+          </div>
+          <div class="aside-tip">
+            <div class="aside-tip-box">
+              <ul class="aside-tip-ul">
+                <li class="aside-tip-contents">
+                  <a href="">
+                    <span>소개</span>
+                  </a>
+                </li>
+                <li class="aside-tip-contents">
+                  <a href="">
+                    <span>도움말</span>
+                  </a>
+                </li>
+                <li class="aside-tip-contents">
+                  <a href="">
+                    <span>홍보 센터</span>
+                  </a>
+                </li>
+                <li class="aside-tip-contents">
+                  <a href="">
+                    <span>API</span>
+                  </a>
+                </li>
+                <li class="aside-tip-contents">
+                  <a href="">
+                    <span>채용 정보</span>
+                  </a>
+                </li>
+                <li class="aside-tip-contents">
+                  <a href="">
+                    <span>개인정보처리방침</span>
+                  </a>
+                </li>
+                <li class="aside-tip-contents">
+                  <a href="">
+                    <span>약관</span>
+                  </a>
+                </li>
+                <li class="aside-tip-contents">
+                  <a href="">
+                    <span>위치</span>
+                  </a>
+                </li>
+                <li class="aside-tip-contents">
+                  <a href="">
+                    <span>인기 계정</span>
+                  </a>
+                </li>
+                <li class="aside-tip-contents">
+                  <a href="">
+                    <span>해시태그</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div class="copyright">
+              <span>© 2022 INSTAGRAM FROM META</span>
+            </div>
+          </div>
+        </aside>
+        <!-- 사이드 만들기 -->
+      </section>
     </div>
-</body>
+  </body>
 </html>
