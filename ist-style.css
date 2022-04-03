@@ -720,12 +720,11 @@ textarea:focus {
 }
 
 .aside-tip {
-  width: 293px;
+  width: 300px;
   height: 129px;
   padding-bottom: 38px;
   font-size: 12px;
   color: #c7c7c7;
-  font-weight: bold;
 }
 
 .aside-tip-box {
@@ -743,10 +742,16 @@ textarea:focus {
 
 .aside-tip-ul li::after {
   content: "·";
+  font-weight: 600;
+}
+
+.aside-tip-ul li:last-child::after {
+  content: none;
 }
 
 .aside-tip-contents {
   display: inline-block;
+  font-weight: 400;
 }
 
 .aside-tip-contents > a {
@@ -755,10 +760,24 @@ textarea:focus {
 
 .aside-tip-contents > a {
   color: #c7c7c7;
-  font-weight: bold;
   text-decoration: none;
 }
 
+.languege {
+  -webkit-appearance: none;
+  appearance: none;
+  border: none;
+  border-radius: 0;
+  opacity: 0;
+  width: 24px;
+  height: 16px;
+  position: relative;
+  right: 28px;
+}
+
+.languege:focus {
+  outline: none;
+}
 .copyright {
   height: 18px;
   align-items: center;
