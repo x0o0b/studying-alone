@@ -313,7 +313,7 @@ input:-ms-input-placeholder {
   border-radius: 50%;
   border: 1px solid transparent;
   background-image: linear-gradient(#fff, #fff),
-    linear-gradient(to right, orange 0%, #c52e92 100%);
+    linear-gradient(45deg, orange 10%, #c52e92 60%);
   background-origin: border-box;
   background-clip: content-box, border-box;
 }
@@ -756,9 +756,6 @@ textarea:focus {
 
 .aside-tip-contents > a {
   display: inline-block;
-}
-
-.aside-tip-contents > a {
   color: #c7c7c7;
   text-decoration: none;
 }
@@ -778,6 +775,7 @@ textarea:focus {
 .languege:focus {
   outline: none;
 }
+
 .copyright {
   height: 18px;
   align-items: center;
