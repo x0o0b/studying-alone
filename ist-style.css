@@ -176,7 +176,9 @@ textarea nav {
 
 body {
   margin: 0px;
-  padding: 0px;
+  padding-top: 60px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
 
 .nav-container {
@@ -185,6 +187,12 @@ body {
   border-bottom: solid 1px #dbdbdb;
   display: flex;
   justify-content: center;
+  background-color: white;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
 }
 
 .nav-main {
@@ -256,6 +264,10 @@ input:-ms-input-placeholder {
   text-align: right;
 }
 
+.icon:hover {
+  cursor: pointer;
+}
+
 .profile {
   width: 25px;
   height: 25px;
@@ -306,6 +318,10 @@ input:-ms-input-placeholder {
   height: 84px;
 }
 
+.story-profile:hover {
+  cursor: pointer;
+}
+
 .story-profile-img {
   width: 64px;
   height: 64px;
@@ -346,6 +362,7 @@ input:-ms-input-placeholder {
   margin-top: 7px;
   font-size: 12px;
   color: #262626;
+  text-align: center;
 }
 
 .story-name-none {
@@ -395,7 +412,7 @@ input:-ms-input-placeholder {
 }
 
 .post-header-text {
-  width: 500px;
+  width: 70px;
   height: 42px;
   margin: 0px 0px 0px 14px;
   text-align: left;
@@ -429,14 +446,17 @@ input:-ms-input-placeholder {
 .user-name {
   font-size: 14px;
   color: #262626;
-  font-weight: bold;
+  font-weight: 600;
 }
 
 .user-name:hover {
   text-decoration: underline;
+  cursor: pointer;
 }
 
-/* 몇개 적용 안되게 하기 */
+#user-name-line-none {
+  text-decoration: none;
+}
 
 .user-tag {
   font-size: 14px;
@@ -541,7 +561,6 @@ input:-ms-input-placeholder {
 .post-time {
   font-size: 10px;
   color: #8e8e8e;
-  font-weight: bold;
   margin-top: 5px;
 }
 
@@ -561,6 +580,14 @@ input:-ms-input-placeholder {
 .ft12 span {
   font-size: 12px;
   text-align: right;
+}
+
+#cursor:hover {
+  cursor: pointer;
+}
+
+#opacity:hover {
+  opacity: 0.5;
 }
 
 .footer-box {
@@ -593,13 +620,11 @@ textarea:focus {
   font-weight: bold;
 }
 
-.null {
-  width: 28px;
-}
-
 .side {
   margin-top: 30px;
   width: 293px;
+  position: fixed;
+  right: 115px;
 }
 
 .aside-profile {
@@ -644,7 +669,11 @@ textarea:focus {
 .aside-profile-transform-text {
   font-size: 12px;
   color: #0095f6;
-  font-weight: bold;
+  font-weight: 600;
+}
+
+.aside-profile-transform-text:hover {
+  cursor: pointer;
 }
 
 .aside-recommend {
@@ -662,14 +691,12 @@ textarea:focus {
   width: 240px;
   font-size: 14px;
   color: #8e8e8e;
-  font-weight: bold;
 }
 
 .aside-recommend-nav-viewall {
   width: 53px;
   font-size: 12px;
   color: #262626;
-  font-weight: bold;
 }
 
 .aside-recommend-list {
@@ -688,6 +715,10 @@ textarea:focus {
 .aside-user-img {
   width: 42px;
   height: 32px;
+}
+
+.aside-user-img:hover {
+  cursor: pointer;
 }
 
 .aside-user-img img {

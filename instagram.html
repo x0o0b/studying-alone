@@ -12,10 +12,16 @@
     />
     <title>Document</title>
   </head>
+  <script>
+    function keyevent() {
+      var keycode = event.keyCode;
+      alert(keycode)
+    }
+  </script>
   <body>
     <nav class="nav-container">
       <div class="nav-main">
-        <div class="insta-logo">
+        <div class="insta-logo" id="cursor">
           <img
             src="https://www.instagram.com/static/images/web/mobile_nav_type_logo.png/735145cfe0a4.png"
           />
@@ -64,7 +70,7 @@
             <div class="post-header-profile">
               <div class="post-profile-img-box">
                 <div class="post-header-img">
-                  <img src="img/profile2.jpg" class="post-profile-img" />
+                  <img src="img/profile2.jpg" class="post-profile-img" id="cursor">
                 </div>
               </div>
 
@@ -73,12 +79,12 @@
                   <span>ryui.aehee</span>
                 </div>
                 <div class="post-location pd2">
-                  <span>칼바람나락</span>
+                  <span id="cursor">칼바람나락</span>
                 </div>
               </div>
             </div>
             <div class="post-header-etc">
-              <span class="material-icons-outlined">more_horiz</span>
+              <span class="material-icons-outlined" id="cursor">more_horiz</span>
             </div>
           </div>
           <div class="post-img">
@@ -138,14 +144,14 @@
               </ul>
               <div class="slide-pagelist">
                 <div class="post-icon-box">
-                  <div class="post-icon">
-                    <span class="material-icons-outlined">favorite_border</span>
+                  <div class="post-icon" id="cursor">
+                    <span class="material-icons-outlined" id="opacity">favorite_border</span>
                   </div>
-                  <div class="post-icon">
-                    <span class="material-icons-outlined">mode_comment</span>
+                  <div class="post-icon" id="cursor">
+                    <span class="material-icons-outlined" id="opacity">mode_comment</span>
                   </div>
-                  <div class="post-icon">
-                    <span class="material-icons-outlined">send</span>
+                  <div class="post-icon" id="cursor">
+                    <span class="material-icons-outlined" id="opacity">send</span>
                   </div>
                 </div>
                 <li><label for="slide01"></label></li>
@@ -154,8 +160,8 @@
                 <li><label for="slide04"></label></li>
                 <li><label for="slide05"></label></li>
                 <div class="post-icon-box2">
-                  <div class="post-icon2">
-                    <span class="material-icons-outlined">bookmark_border</span>
+                  <div class="post-icon2" id="cursor">
+                    <span class="material-icons-outlined" id="opacity">bookmark_border</span>
                   </div>
                 </div>
               </div>
@@ -165,14 +171,14 @@
             <div class="post-content-comment">
               <div class="heart">
                 <div class="heart-img-box">
-                  <img src="img/profile3.jpg" class="heart-img" />
+                  <img src="img/profile3.jpg" class="heart-img" id="cursor">
                 </div>
                 <div class="heart-text-box">
                   <div class="heart-text">
                     <span class="user-name">doeylk_017</span
                     ><!--
                                     -->님
-                    <span class="user-name">외 5,465,345,342,257명</span
+                    <span class="user-name" id="user-name-line-none">외 5,465,345,342,257명</span
                     ><!--
                                     -->이 좋아합니다
                   </div>
@@ -193,8 +199,8 @@
                     <span class="blank"></span>
                     <span>아니 시바 ㅋㅋㅋㅋㅋㅋ</span>
                   </div>
-                  <div class="ft12">
-                    <span class="material-icons"> favorite_border </span>
+                  <div class="ft12" id="cursor">
+                    <span class="material-icons" id="opacity"> favorite_border </span>
                   </div>
                 </div>
                 <div class="comment">
@@ -204,8 +210,8 @@
                     <span class="user-tag">@deop0a111</span>
                     <span>ㄹㄱㄴ</span>
                   </div>
-                  <div class="ft12">
-                    <span class="material-icons"> favorite_border </span>
+                  <div class="ft12" id="cursor">
+                    <span class="material-icons" id="opacity"> favorite_border </span>
                   </div>
                 </div>
               </div>
@@ -217,7 +223,125 @@
           <div class="post-footer">
             <form class="footer-box">
               <div class="post-icon">
-                <span class="material-icons-outlined">
+                <span class="material-icons-outlined" id="cursor">
+                  sentiment_satisfied
+                </span>
+              </div>
+              <textarea
+                class="footer-text"
+                placeholder="댓글 달기..."
+                onkeyup="keyevent(this);"
+              ></textarea>
+              <div class="send"><span>게시</span></div>
+            </form>
+          </div>
+          <div class="post-header">
+            <div class="post-header-profile">
+              <div class="post-profile-img-box">
+                <div class="post-header-img">
+                  <img src="img/profile2.jpg" class="post-profile-img" id="cursor">
+                </div>
+              </div>
+
+              <div class="post-header-text">
+                <div class="user-name pd2">
+                  <span>ryui.aehee</span>
+                </div>
+                <div class="post-location pd2">
+                  <span id="cursor">칼바람나락</span>
+                </div>
+              </div>
+            </div>
+            <div class="post-header-etc">
+              <span class="material-icons-outlined" id="cursor">more_horiz</span>
+            </div>
+          </div>
+          <div class="post-img">
+            <div class="slidewrap">
+              <ul class="slidelist">
+                <li class="slideitem">
+                  <a>
+                    <img src="img/post-img13.png" />
+                  </a>
+                </li>
+              </ul>
+              <div class="slide-pagelist">
+                <div class="post-icon-box">
+                  <div class="post-icon" id="cursor">
+                    <span class="material-icons-outlined" id="opacity">favorite_border</span>
+                  </div>
+                  <div class="post-icon" id="cursor">
+                    <span class="material-icons-outlined" id="opacity">mode_comment</span>
+                  </div>
+                  <div class="post-icon" id="cursor">
+                    <span class="material-icons-outlined" id="opacity">send</span>
+                  </div>
+                </div>
+                <div class="post-icon-box2">
+                  <div class="post-icon2" id="cursor">
+                    <span class="material-icons-outlined" id="opacity">bookmark_border</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="post-content">
+            <div class="post-content-comment">
+              <div class="heart">
+                <div class="heart-img-box">
+                  <img src="img/profile3.jpg" class="heart-img" id="cursor">
+                </div>
+                <div class="heart-text-box">
+                  <div class="heart-text">
+                    <span class="user-name">doeylk_017</span
+                    ><!--
+                                    -->님
+                    <span class="user-name" id="user-name-line-none">외 5,465,345,342,257명</span
+                    ><!--
+                                    -->이 좋아합니다
+                  </div>
+                </div>
+              </div>
+              <div class="user-writing">
+                <span class="user-name">ryui.aehee</span>
+                <span class="blank"></span>
+                <span>롤하다가 6년 선배 만났다</span>
+              </div>
+              <div class="comment-more">
+                <span>댓글 6,024,272,361개 모두 보기</span>
+              </div>
+              <div class="comment-box">
+                <div class="comment">
+                  <div class="comment-text">
+                    <span class="user-name">deopa1110</span>
+                    <span class="blank"></span>
+                    <span>아니 시바 ㅋㅋㅋㅋㅋㅋ</span>
+                  </div>
+                  <div class="ft12" id="cursor">
+                    <span class="material-icons" id="opacity"> favorite_border </span>
+                  </div>
+                </div>
+                <div class="comment">
+                  <div class="comment-text">
+                    <span class="user-name">ryuj.aehee</span>
+                    <span class="blank"></span>
+                    <span class="user-tag">@deop0a111</span>
+                    <span>ㄹㄱㄴ</span>
+                  </div>
+                  <div class="ft12" id="cursor">
+                    <span class="material-icons" id="opacity"> favorite_border </span>
+                  </div>
+                </div>
+              </div>
+              <div class="post-time">
+                <span>5분 전</span>
+              </div>
+            </div>
+          </div>
+          <div class="post-footer">
+            <form class="footer-box">
+              <div class="post-icon">
+                <span class="material-icons-outlined" id="cursor">
                   sentiment_satisfied
                 </span>
               </div>
@@ -229,7 +353,6 @@
             </form>
           </div>
         </div>
-        <div class="null"></div>
         <aside class="side">
           <div class="aside-profile">
             <div class="aside-profile-img">
@@ -237,7 +360,7 @@
             </div>
             <div class="aside-profile-name">
               <div class="aside-profile-text">
-                <span class="user-name">hoseon_05</span>
+                <span class="user-name" id="user-name-line-none">hoseon_05</span>
               </div>
             </div>
             <div class="aside-profile-transform">
@@ -402,7 +525,7 @@
                 </li>
                 <li class="aside-tip-contents">
                   <span>언어</span>
-                  <select class="languege">
+                  <select class="languege" id="cursor">
                       <option selected disabled hidden></option>
                       <option>Afrikaans</option>
                       <option>Čeština</option>
