@@ -30,7 +30,10 @@
 
         <div class="input">
           <form>
-            <input type="text" placeholder="      검색" class="inp" />
+            <input type="text" placeholder="      검색"
+            onfocus="this.placeholder='검색'"
+            onblur="this.placeholder='      검색'"
+            class="inp" />
             <span class="material-icons">search</span>
             <!-- 클릭 시 아이콘을 지워보리기
                  클릭 후 x버튼두 만들기 -->
@@ -53,21 +56,66 @@
         <div class="main">
           <div class="story-bg">
             <div class="story">
-              <li></li>
-              <div class="story-profile">
+              <div class="story-profile" style="margin-left: 10px;">
                 <div class="story-profile-img">
                   <img src="img/profile2.jpg" class="story-img" />
                 </div>
                 <div class="story-name"><span>ryui.aehee</span></div>
               </div>
-              <li></li>
               <div class="story-profile">
                 <div class="story-profile-img-none">
                   <img src="img/profile3.jpg" class="story-img" />
                 </div>
                 <div class="story-name-none"><span>doeylk_017</span></div>
               </div>
-              <li></li>
+              <div class="story-profile">
+                <div class="story-profile-img">
+                  <img src="img/profile2.jpg" class="story-img" />
+                </div>
+                <div class="story-name"><span>ryui.aehee</span></div>
+              </div>
+              <div class="story-profile">
+                <div class="story-profile-img-none">
+                  <img src="img/profile3.jpg" class="story-img" />
+                </div>
+                <div class="story-name-none"><span>doeylk_017</span></div>
+              </div>
+              <div class="story-profile">
+                <div class="story-profile-img">
+                  <img src="img/profile2.jpg" class="story-img" />
+                </div>
+                <div class="story-name"><span>ryui.aehee</span></div>
+              </div>
+              <div class="story-profile">
+                <div class="story-profile-img-none">
+                  <img src="img/profile3.jpg" class="story-img" />
+                </div>
+                <div class="story-name-none"><span>doeylk_017</span></div>
+              </div>
+              <div class="story-profile">
+                <div class="story-profile-img">
+                  <img src="img/profile2.jpg" class="story-img" />
+                </div>
+                <div class="story-name"><span>ryui.aehee</span></div>
+              </div>
+              <div class="story-profile">
+                <div class="story-profile-img-none">
+                  <img src="img/profile3.jpg" class="story-img" />
+                </div>
+                <div class="story-name-none"><span>doeylk_017</span></div>
+              </div>
+              <div class="story-profile">
+                <div class="story-profile-img">
+                  <img src="img/profile2.jpg" class="story-img" />
+                </div>
+                <div class="story-name"><span>ryui.aehee</span></div>
+              </div>
+              <div class="story-profile">
+                <div class="story-profile-img-none">
+                  <img src="img/profile3.jpg" class="story-img" />
+                </div>
+                <div class="story-name-none"><span>doeylk_017</span></div>
+              </div>
               <!-- 크기 넘어가면 overflow주기 근데 이거 어케함?ㅋㅋ  -->
             </div>
           </div>
@@ -359,234 +407,236 @@
           </div>
         </div>
         <aside class="side">
-          <div class="aside-profile">
-            <div class="aside-profile-img">
-              <img src="img/profile.jpg" />
-            </div>
-            <div class="aside-profile-name">
-              <div class="aside-profile-text">
-                <span class="user-name" id="user-name-line-none">hoseon_05</span>
+          <div style="position: fixed;">
+            <div class="aside-profile">
+              <div class="aside-profile-img">
+                <img src="img/profile.jpg" />
+              </div>
+              <div class="aside-profile-name">
+                <div class="aside-profile-text">
+                  <span class="user-name" id="user-name-line-none">hoseon_05</span>
+                </div>
+              </div>
+              <div class="aside-profile-transform">
+                <div style="display: inline-block">
+                  <span class="aside-profile-transform-text">전환</span>
+                </div>
               </div>
             </div>
-            <div class="aside-profile-transform">
-              <div style="display: inline-block">
-                <span class="aside-profile-transform-text">전환</span>
-              </div>
+            <div class="aside-recommend">
+              <nav class="aside-recommend-nav">
+                <div class="aside-recommend-nav-text">
+                  <span>회원님을 위한 추천</span>
+                </div>
+                <div class="aside-recommend-nav-viewall">
+                  <span>모두 보기</span>
+                </div>
+              </nav>
+              <div class="aside-recommend-list">
+                <div class="aside-user">
+                  <div class="aside-user-img">
+                    <img src="img/profile4.jpg" />
+                  </div>
+                  <div class="aside-user-text">
+                    <div class="user-name-box">
+                      <span class="user-name">ansqjatj</span>
+                    </div>
+                    <div class="user-explanation-box">
+                      <span class="user-explanation">회원님을 팔로우합니다</span>
+                    </div>
+                  </div>
+                  <div class="aside-user-follow">
+                    <div style="display: inline-block">
+                      <span class="aside-profile-transform-text">팔로우</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="aside-user">
+                  <div class="aside-user-img">
+                    <img src="img/profile5.jpg" />
+                  </div>
+                  <div class="aside-user-text">
+                    <div class="user-name-box">
+                      <span class="user-name">mins_0825</span>
+                    </div>
+                    <div class="user-explanation-box">
+                      <span class="user-explanation">doeylk_017님 외 1명이 팔로우합니다</span>
+                    </div>
+                  </div>
+                  <div class="aside-user-follow">
+                    <div style="display: inline-block">
+                      <span class="aside-profile-transform-text">팔로우</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="aside-user">
+                  <div class="aside-user-img">
+                    <img src="img/profile7.jpg" />
+                  </div>
+                  <div class="aside-user-text">
+                    <div class="user-name-box">
+                      <span class="user-name">ananjaemin</span>
+                    </div>
+                    <div class="user-explanation-box">
+                      <span class="user-explanation">jea.0214님 외 2명이 팔로우합니다</span>
+                    </div>
+                  </div>
+                  <div class="aside-user-follow">
+                    <div style="display: inline-block">
+                      <span class="aside-profile-transform-text">팔로우</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="aside-user">
+                  <div class="aside-user-img">
+                    <img src="img/profile4.jpg" />
+                  </div>
+                  <div class="aside-user-text">
+                    <div class="user-name-box">
+                      <span class="user-name">ggos3_</span>
+                    </div>
+                    <div class="user-explanation-box">
+                      <span class="user-explanation">회원님을 위한 추천</span>
+                    </div>
+                  </div>
+                  <div class="aside-user-follow">
+                    <div style="display: inline-block">
+                      <span class="aside-profile-transform-text">팔로우</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="aside-user">
+                  <div class="aside-user-img">
+                    <img src="img/profile6.jpg" />
+                  </div>
+                  <div class="aside-user-text">
+                    <div class="user-name-box">
+                      <span class="user-name">iuju794</span>
+                    </div>
+                    <div class="user-explanation-box">
+                      <span class="user-explanation">jea.0214님 외 2명이 팔로우합니다</span>
+                    </div>
+                  </div>
+                  <div class="aside-user-follow">
+                    <div style="display: inline-block">
+                      <span class="aside-profile-transform-text">팔로우</span>
+                    </div>
+                  </div>
+                </div>
             </div>
-          </div>
-          <div class="aside-recommend">
-            <nav class="aside-recommend-nav">
-              <div class="aside-recommend-nav-text">
-                <span>회원님을 위한 추천</span>
+            <div class="aside-tip">
+              <div class="aside-tip-box">
+                <ul class="aside-tip-ul">
+                  <li class="aside-tip-contents">
+                    <a href="https://about.instagram.com/">
+                      <span>소개</span>
+                    </a>
+                  </li>
+                  <li class="aside-tip-contents">
+                    <a href="https://help.instagram.com/">
+                      <span>도움말</span>
+                    </a>
+                  </li>
+                  <li class="aside-tip-contents">
+                    <a href="https://about.instagram.com/blog">
+                      <span>홍보 센터</span>
+                    </a>
+                  </li>
+                  <li class="aside-tip-contents">
+                    <a href="https://developers.facebook.com/docs/instagram">
+                      <span>API</span>
+                    </a>
+                  </li>
+                  <li class="aside-tip-contents">
+                    <a href="https://about.instagram.com/about-us/careers">
+                      <span>채용 정보</span>
+                    </a>
+                  </li>
+                  <li class="aside-tip-contents">
+                    <a href="https://www.instagram.com/legal/privacy/">
+                      <span>개인정보처리방침</span>
+                    </a>
+                  </li>
+                  <li class="aside-tip-contents">
+                    <a href="https://help.instagram.com/legal/terms/">
+                      <span>약관</span>
+                    </a>
+                  </li>
+                  <li class="aside-tip-contents">
+                    <a href="https://www.instagram.com/explore/locations/">
+                      <span>위치</span>
+                    </a>
+                  </li>
+                  <li class="aside-tip-contents">
+                    <a href="https://www.instagram.com/directory/profiles/">
+                      <span>인기 계정</span>
+                    </a>
+                  </li>
+                  <li class="aside-tip-contents">
+                    <a href="https://www.instagram.com/directory/hashtags/">
+                      <span>해시태그</span>
+                    </a>
+                  </li>
+                  <li class="aside-tip-contents">
+                    <span>언어</span>
+                    <select class="languege" id="cursor">
+                        <option selected disabled hidden></option>
+                        <option>Afrikaans</option>
+                        <option>Čeština</option>
+                        <option>Dansk</option>
+                        <option>Deutsch</option>
+                        <option>Ελληνικά</option>
+                        <option>English</option>
+                        <option>English (UK)</option>
+                        <option>Español (España)</option>
+                        <option>Español</option>
+                        <option>Suomi</option>
+                        <option>Français</option>
+                        <option>Bahasa Indonesia</option>
+                        <option>Italiano</option>
+                        <option>日本語</option>
+                        <option>한국어</option>
+                        <option>Bahasa Melayu</option>
+                        <option>Norsk</option>
+                        <option>Nederlands</option>
+                        <option>Polski</option>
+                        <option>Português (Brasil)</option>
+                        <option>Português (Portugal)</option>
+                        <option>Русский</option>
+                        <option>Svenska</option>
+                        <option>ภาษาไทย</option>
+                        <option>Filipino</option>
+                        <option>Türkçe</option>
+                        <option>中文(简体)</option>
+                        <option>中文(台灣)</option>
+                        <option>বাংলা</option>
+                        <option>ગુજરાતી</option>
+                        <option>हिन्दी</option>
+                        <option>Hrvatski</option>
+                        <option>Magyar</option>
+                        <option>ಕನ್ನಡ</option>
+                        <option>മലയാളം</option>
+                        <option>मराठी</option>
+                        <option>नेपाली</option>
+                        <option>ਪੰਜਾਬੀ</option>
+                        <option>සිංහල</option>
+                        <option>Slovenčina</option>
+                        <option>தமிழ்</option>
+                        <option>తెలుగు</option>
+                        <option>Tiếng Việt</option>
+                        <option>中文(香港)</option>
+                        <option>Български</option>
+                        <option>Français (Canada)</option>
+                        <option>Română</option>
+                        <option>Српски</option>
+                        <option>Українська</option>
+                    </select>
+                  </li>
+                </ul>
               </div>
-              <div class="aside-recommend-nav-viewall">
-                <span>모두 보기</span>
+              <div class="copyright">
+                <span>© 2022 INSTAGRAM FROM META</span>
               </div>
-            </nav>
-            <div class="aside-recommend-list">
-              <div class="aside-user">
-                <div class="aside-user-img">
-                  <img src="img/profile4.jpg" />
-                </div>
-                <div class="aside-user-text">
-                  <div class="user-name-box">
-                    <span class="user-name">ansqjatj</span>
-                  </div>
-                  <div class="user-explanation-box">
-                    <span class="user-explanation">회원님을 팔로우합니다</span>
-                  </div>
-                </div>
-                <div class="aside-user-follow">
-                  <div style="display: inline-block">
-                    <span class="aside-profile-transform-text">팔로우</span>
-                  </div>
-                </div>
-              </div>
-              <div class="aside-user">
-                <div class="aside-user-img">
-                  <img src="img/profile5.jpg" />
-                </div>
-                <div class="aside-user-text">
-                  <div class="user-name-box">
-                    <span class="user-name">mins_0825</span>
-                  </div>
-                  <div class="user-explanation-box">
-                    <span class="user-explanation">doeylk_017님 외 1명이 팔로우합니다</span>
-                  </div>
-                </div>
-                <div class="aside-user-follow">
-                  <div style="display: inline-block">
-                    <span class="aside-profile-transform-text">팔로우</span>
-                  </div>
-                </div>
-              </div>
-              <div class="aside-user">
-                <div class="aside-user-img">
-                  <img src="img/profile7.jpg" />
-                </div>
-                <div class="aside-user-text">
-                  <div class="user-name-box">
-                    <span class="user-name">ananjaemin</span>
-                  </div>
-                  <div class="user-explanation-box">
-                    <span class="user-explanation">jea.0214님 외 2명이 팔로우합니다</span>
-                  </div>
-                </div>
-                <div class="aside-user-follow">
-                  <div style="display: inline-block">
-                    <span class="aside-profile-transform-text">팔로우</span>
-                  </div>
-                </div>
-              </div>
-              <div class="aside-user">
-                <div class="aside-user-img">
-                  <img src="img/profile4.jpg" />
-                </div>
-                <div class="aside-user-text">
-                  <div class="user-name-box">
-                    <span class="user-name">ggos3_</span>
-                  </div>
-                  <div class="user-explanation-box">
-                    <span class="user-explanation">회원님을 위한 추천</span>
-                  </div>
-                </div>
-                <div class="aside-user-follow">
-                  <div style="display: inline-block">
-                    <span class="aside-profile-transform-text">팔로우</span>
-                  </div>
-                </div>
-              </div>
-              <div class="aside-user">
-                <div class="aside-user-img">
-                  <img src="img/profile6.jpg" />
-                </div>
-                <div class="aside-user-text">
-                  <div class="user-name-box">
-                    <span class="user-name">iuju794</span>
-                  </div>
-                  <div class="user-explanation-box">
-                    <span class="user-explanation">jea.0214님 외 2명이 팔로우합니다</span>
-                  </div>
-                </div>
-                <div class="aside-user-follow">
-                  <div style="display: inline-block">
-                    <span class="aside-profile-transform-text">팔로우</span>
-                  </div>
-                </div>
-              </div>
-          </div>
-          <div class="aside-tip">
-            <div class="aside-tip-box">
-              <ul class="aside-tip-ul">
-                <li class="aside-tip-contents">
-                  <a href="https://about.instagram.com/">
-                    <span>소개</span>
-                  </a>
-                </li>
-                <li class="aside-tip-contents">
-                  <a href="https://help.instagram.com/">
-                    <span>도움말</span>
-                  </a>
-                </li>
-                <li class="aside-tip-contents">
-                  <a href="https://about.instagram.com/blog">
-                    <span>홍보 센터</span>
-                  </a>
-                </li>
-                <li class="aside-tip-contents">
-                  <a href="https://developers.facebook.com/docs/instagram">
-                    <span>API</span>
-                  </a>
-                </li>
-                <li class="aside-tip-contents">
-                  <a href="https://about.instagram.com/about-us/careers">
-                    <span>채용 정보</span>
-                  </a>
-                </li>
-                <li class="aside-tip-contents">
-                  <a href="https://www.instagram.com/legal/privacy/">
-                    <span>개인정보처리방침</span>
-                  </a>
-                </li>
-                <li class="aside-tip-contents">
-                  <a href="https://help.instagram.com/legal/terms/">
-                    <span>약관</span>
-                  </a>
-                </li>
-                <li class="aside-tip-contents">
-                  <a href="https://www.instagram.com/explore/locations/">
-                    <span>위치</span>
-                  </a>
-                </li>
-                <li class="aside-tip-contents">
-                  <a href="https://www.instagram.com/directory/profiles/">
-                    <span>인기 계정</span>
-                  </a>
-                </li>
-                <li class="aside-tip-contents">
-                  <a href="https://www.instagram.com/directory/hashtags/">
-                    <span>해시태그</span>
-                  </a>
-                </li>
-                <li class="aside-tip-contents">
-                  <span>언어</span>
-                  <select class="languege" id="cursor">
-                      <option selected disabled hidden></option>
-                      <option>Afrikaans</option>
-                      <option>Čeština</option>
-                      <option>Dansk</option>
-                      <option>Deutsch</option>
-                      <option>Ελληνικά</option>
-                      <option>English</option>
-                      <option>English (UK)</option>
-                      <option>Español (España)</option>
-                      <option>Español</option>
-                      <option>Suomi</option>
-                      <option>Français</option>
-                      <option>Bahasa Indonesia</option>
-                      <option>Italiano</option>
-                      <option>日本語</option>
-                      <option>한국어</option>
-                      <option>Bahasa Melayu</option>
-                      <option>Norsk</option>
-                      <option>Nederlands</option>
-                      <option>Polski</option>
-                      <option>Português (Brasil)</option>
-                      <option>Português (Portugal)</option>
-                      <option>Русский</option>
-                      <option>Svenska</option>
-                      <option>ภาษาไทย</option>
-                      <option>Filipino</option>
-                      <option>Türkçe</option>
-                      <option>中文(简体)</option>
-                      <option>中文(台灣)</option>
-                      <option>বাংলা</option>
-                      <option>ગુજરાતી</option>
-                      <option>हिन्दी</option>
-                      <option>Hrvatski</option>
-                      <option>Magyar</option>
-                      <option>ಕನ್ನಡ</option>
-                      <option>മലയാളം</option>
-                      <option>मराठी</option>
-                      <option>नेपाली</option>
-                      <option>ਪੰਜਾਬੀ</option>
-                      <option>සිංහල</option>
-                      <option>Slovenčina</option>
-                      <option>தமிழ்</option>
-                      <option>తెలుగు</option>
-                      <option>Tiếng Việt</option>
-                      <option>中文(香港)</option>
-                      <option>Български</option>
-                      <option>Français (Canada)</option>
-                      <option>Română</option>
-                      <option>Српски</option>
-                      <option>Українська</option>
-                  </select>
-                </li>
-              </ul>
-            </div>
-            <div class="copyright">
-              <span>© 2022 INSTAGRAM FROM META</span>
             </div>
           </div>
         </aside>
