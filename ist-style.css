@@ -221,6 +221,10 @@ body {
   position: relative;
 }
 
+.input:focus > form > span {
+  opacity: 0;
+}
+
 input::placeholder {
   color: #8e8e8e;
   font-weight: 100;
@@ -590,6 +594,10 @@ input:-ms-input-placeholder {
 
 #cursor:hover {
   cursor: pointer;
+}
+
+#cursor-none:hover {
+  cursor: default;
 }
 
 #opacity:hover {

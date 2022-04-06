@@ -5,17 +5,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="ist-style.css" />
-    <link rel="stylesheet" href="normalize.css" />
+    <link rel="stylesheet" href="normalize.css">
     <link
       href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet"
     />
-    <title>Document</title>
+    <title>Instagram</title>
+    <link rel="shortcut icon" type="image⁄x-icon" href="img/instagram-title-logo.png">
   </head>
   <body>
     <nav class="nav-container">
       <div class="nav-main">
-        <div class="insta-logo" id="cursor">
+        <div class="insta-logo" id="cursor" onclick="location.href='instagram.html';">
           <img
             src="https://www.instagram.com/static/images/web/mobile_nav_type_logo.png/735145cfe0a4.png"
           />
@@ -29,7 +30,8 @@
             class="inp" />
             <span class="material-icons">search</span>
             <!-- 클릭 시 아이콘을 지워보리기
-                 클릭 후 x버튼두 만들기 -->
+                 클릭 후 x버튼두 만들기 
+                완성 못 함 ㅜㅜ-->
     
           </form>
         </div>
@@ -109,7 +111,6 @@
                 </div>
                 <div class="story-name-none"><span>doeylk_017</span></div>
               </div>
-              <!-- 크기 넘어가면 overflow주기 근데 이거 어케함?ㅋㅋ  -->
             </div>
           </div>
           <div class="post-header">
@@ -277,9 +278,11 @@
                 class="footer-text"
                 placeholder="댓글 달기..."
               ></textarea>
-              <div class="send"><span>게시</span></div>
+              <div class="send"><span  id="cursor-none">게시</span></div>
+              <!-- 글씨 쓰면 게시 색 바뀌기 해결 몬함 -->
             </form>
           </div>
+          <!-- 임시로 하나 만듬 -->
           <div class="post-header">
             <div class="post-header-profile">
               <div class="post-profile-img-box">
@@ -322,6 +325,7 @@
                     <span class="material-icons-outlined" id="opacity">send</span>
                   </div>
                 </div>
+                <div style="width: 30px;"></div>
                 <div class="post-icon-box2">
                   <div class="post-icon2" id="cursor">
                     <span class="material-icons-outlined" id="opacity">bookmark_border</span>
@@ -394,7 +398,7 @@
                 class="footer-text"
                 placeholder="댓글 달기..."
               ></textarea>
-              <div class="send"><span>게시</span></div>
+              <div class="send"><span id="cursor-none">게시</span></div>
             </form>
           </div>
         </div>
