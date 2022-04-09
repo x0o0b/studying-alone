@@ -630,7 +630,7 @@ textarea:focus {
 .send {
   width: 28px;
   color: #0095f6;
-  opacity: 0.5;
+  opacity: 1;
   font-weight: bold;
 }
 
@@ -823,4 +823,14 @@ textarea:focus {
 .copyright {
   height: 18px;
   align-items: center;
+}
+
+@media screen and (max-width: 1000px) {
+  .side {
+    display: none;
+  }
+
+  .content {
+    width: 600px;
+  }
 }
