@@ -104,7 +104,7 @@
 
 .slide-pagelist {
   text-align: center;
-  width: 614px;
+  width: 100%;
   height: 54px;
   background-color: white;
   border-left: solid 1px #dbdbdb;
@@ -383,7 +383,7 @@ input:-ms-input-placeholder {
 
 .post-header {
   margin-top: 24px;
-  width: 614px;
+  width: 100%;
   height: 70px;
   background-color: white;
   border: solid 1px #dbdbdb;
@@ -529,7 +529,7 @@ input:-ms-input-placeholder {
 }
 
 .post-content {
-  width: 614px;
+  width: 100%;
   background-color: white;
   border: solid 1px hsl(0, 0%, 86%);
   border-top: none;
@@ -575,7 +575,7 @@ input:-ms-input-placeholder {
 }
 
 .post-footer {
-  width: 614px;
+  width: 100%;
   height: 53px;
   padding: 6px 16px;
   background-color: white;
@@ -833,4 +833,15 @@ textarea:focus {
   .content {
     width: 600px;
   }
+
+  .main {
+    width: 600px;
+  }
+
+  .footer-text {
+    width: 500px;
+  }
+}
+
+@media screen and (max-width: 640px) {
 }
