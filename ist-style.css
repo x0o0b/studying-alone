@@ -221,8 +221,8 @@ body {
   position: relative;
 }
 
-.input:focus > form > span {
-  opacity: 0;
+.inp:focus ~ span {
+  display: none;
 }
 
 input::placeholder {
