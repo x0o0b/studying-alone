@@ -4,16 +4,30 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="main.css" />
     <title>Document</title>
   </head>
   <body>
-    <h1 id="hello">안녕하세요</h1>
-    <h1 id="hi">JS 초보에요</h1>
+    <div class="alert-box" id="alert">
+      알림창임
+      <button onclick="alert('none');">닫기</button>
+    </div>
+
+    <button onclick="alert('block'); alertIdPw('아이디를 입력하세요');">
+      버튼
+    </button>
+
+    <button onclick="alert('block'); alertIdPw('비밀번호를 입력하세요');">
+      버튼2
+    </button>
 
     <script>
-      document.getElementById("hello").innerHTML = "안녕";
-      document.getElementById("hello").style.fontSize = "16px";
-      document.getElementById("hi").innerHTML = "JS 고수에요";
+      function alert(구멍) {
+        document.getElementById("alert").style.display = 구멍;
+      }
+      function alertIdPw(asd) {
+        document.getElementById("alert").innerHTML = asd;
+      }
     </script>
   </body>
 </html>
