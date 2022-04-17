@@ -10,24 +10,28 @@
   <body>
     <div class="alert-box" id="alert">
       알림창임
-      <button onclick="alert('none');">닫기</button>
+      <button id="close">닫기</button>
     </div>
 
-    <button onclick="alert('block'); alertIdPw('아이디를 입력하세요');">
+    <button onclick="alert123('block'); alertIdPw('아이디를 입력하세요');">
       버튼
     </button>
 
-    <button onclick="alert('block'); alertIdPw('비밀번호를 입력하세요');">
+    <button onclick="alert123('block'); alertIdPw('비밀번호를 입력하세요');">
       버튼2
     </button>
 
     <script>
-      function alert(구멍) {
+      function alert123(구멍) {
         document.getElementById("alert").style.display = 구멍;
       }
       function alertIdPw(asd) {
         document.getElementById("alert").innerHTML = asd;
       }
+
+      document.getElementById("close").addEventListener("click", function () {
+        document.getElementById("alert").style.display = "none";
+      });
     </script>
   </body>
 </html>
