@@ -7,11 +7,15 @@
 }
 
 .list-group {
-  display: none;
+  visibility: hidden;
+  overflow: hidden;
+  height: 0px;
+  transition: all 0.5s;
 }
 
 .show {
-  display: block;
+  visibility: visible;
+  height: 207px;
 }
 
 .black-bg {
@@ -21,10 +25,22 @@
   background: rgba(0, 0, 0, 0.5);
   z-index: 5;
   padding: 30px;
-  display: none;
+  visibility: hidden;
+  opacity: 0;
+  transition: all 1s;
 }
 .white-bg {
   background: white;
   border-radius: 5px;
   padding: 30px;
+}
+
+.show-modal{
+  visibility: visible;
+  opacity: 1;
+}
+
+.main-bg {
+  background-color: lightgrey;
+  padding: 100px 20px;
 }

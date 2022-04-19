@@ -22,9 +22,38 @@
     <div class="black-bg">
       <div class="white-bg">
         <h4>로그인하세요</h4>
-        <button class="btn btn-danger" id="close">닫기</button>
+        <form action="success.html">
+          <div class="my-3">
+            <input type="text" class="form-control" id="id" />
+          </div>
+          <div class="my-3">
+            <input type="password" class="form-control" id="pw" />
+          </div>
+          <button type="submit" class="btn btn-primary" id="submit">
+            전송
+          </button>
+          <button type="button" class="btn btn-danger" id="close">닫기</button>
+        </form>
       </div>
     </div>
+
+    <script>
+      $("#submit").on("click", function () {
+        if ($("#id").val().length == 0 && $("#pw").val().length == 0) {
+          alert("똑바로 좀 입력하세요.");
+          return false;
+        } else if ($("#id").val().length == 0) {
+          alert("아이디 입력하셈");
+          return false;
+        } else if ($("#pw").val().length == 0) {
+          alert("비번 입력하셈");
+          return false;
+        } else if ($("#pw").val().length < 6) {
+          alert("왤케 비번이 너무 짧음");
+          return false;
+        }
+      });
+    </script>
 
     <nav class="navbar navbar-light bg-light">
       <div class="container-fluid">
@@ -42,21 +71,22 @@
       <li class="list-group-item">And a fifth one</li>
     </ul>
 
-    <button id="test-btn">로그인</button>
-
+    <div class="main-bg">
+      <h4>Shirts on Sale</h4>
+      <button class="btn btn-danger" id="login">로그인</button>
+    </div>
     <script>
-      document
-        .querySelectorAll(".navbar-toggler")[0]
-        .addEventListener("click", function () {
-          document.querySelectorAll(".list-group")[0].classList.toggle("show");
-        });
+      document;
+      $(".navbar-toggler").on("click", function () {
+        $(".list-group").toggleClass("show");
+      });
 
-      $("#test-btn").on("click", function () {
-        $(".black-bg").toggle();
+      $("#login").on("click", function () {
+        $(".black-bg").addClass("show-modal");
       });
 
       $("#close").on("click", function () {
-        $(".black-bg").toggle();
+        $(".black-bg").removeClass("show-modal");
       });
     </script>
 
