@@ -8,5 +8,26 @@
 </head>
 <body>
     전송완료
+    <script>
+        function 삼육구게임(num) {
+            if(num % 10 == 3 || num % 10 == 6 || num % 10 == 9) {
+                console.log('박수')
+            } else {
+                console.log('통과')
+            }
+        }
+
+        function 합격했냐(n1, n2) {
+            if(n1 > 100 || n2 > 100) {
+                alert('숫자 좀 똑바로 입력하삼')
+            } else if(n1 < 40 || n2 < 40) {
+                console.log('불합격')
+            } else if(n1 + n2 >= 120) {
+                console.log('합격')
+            } else {
+                console.log('불합격')
+            }
+        }
+    </script>
 </body>
 </html>
