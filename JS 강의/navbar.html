@@ -64,8 +64,20 @@
         </button>
       </div>
     </nav>
-
-    <script></script>
+    
+    <script>
+      var count = 0;
+      $('.badge').on('click', function(){
+        count = count + 1;
+        if(count % 2 == 1){
+          $('.badge').css('color', 'gray')
+          $('.badge').html('Light 🔄')
+        } else if(count % 2 == 0){
+          $('.badge').css('color', 'white')
+          $('.badge').html('Dark 🔄')
+        }
+      })
+    </script>
 
     <ul class="list-group">
       <li class="list-group-item">An item</li>
