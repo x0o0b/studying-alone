@@ -1,33 +1,89 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
+  </head>
+  <body>
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
+    ></script>
     전송완료
     <script>
-        function 삼육구게임(num) {
-            if(num % 10 == 3 || num % 10 == 6 || num % 10 == 9) {
-                console.log('박수')
-            } else {
-                console.log('통과')
-            }
+      function 삼육구게임(num) {
+        if (num % 10 == 3 || num % 10 == 6 || num % 10 == 9) {
+          console.log("박수");
+        } else {
+          console.log("통과");
         }
+      }
 
-        function 합격했냐(n1, n2) {
-            if(n1 > 100 || n2 > 100) {
-                alert('숫자 좀 똑바로 입력하삼')
-            } else if(n1 < 40 || n2 < 40) {
-                console.log('불합격')
-            } else if(n1 + n2 >= 120) {
-                console.log('합격')
-            } else {
-                console.log('불합격')
-            }
+      function 합격했냐(n1, n2) {
+        if (n1 > 100 || n2 > 100) {
+          alert("숫자 좀 똑바로 입력하삼");
+        } else if (n1 < 40 || n2 < 40) {
+          console.log("불합격");
+        } else if (n1 + n2 >= 120) {
+          console.log("합격");
+        } else {
+          console.log("불합격");
         }
+      }
+
+      let 나이 = 12;
+      const 출신지역 = "서울";
+
+      var 예금액 = 60000;
+      var 예금기간 = 2;
+      var 횟수;
+      for (횟수 = 0; 횟수 < 예금기간; 횟수++) {
+        if (예금액 >= 50000) {
+          예금액 = 예금액 + (예금액 / 100) * 20;
+        } else {
+          예금액 = 예금액 + (예금액 / 100) * 15;
+        }
+      }
+      console.log(예금액);
+
+      var first = 360;
+      var second;
+      var third;
+      second = (first / 3) * 2;
+      console.log("첫번째 리필 %d ml 되었습니다", second);
+      third = (second / 3) * 2;
+      console.log("두번째 리필 %d ml 되었습니다", third);
+
+      var 예금액 = 60000;
+      var 미래예금액 = 0;
+
+      미래예금액 = 예금액 * 1.2 ** 10;
+
+      console.log(미래예금액);
     </script>
-</body>
+
+    <p>태조 이성계가 태어난 년도는?</p>
+    <input type="text" id="answer" />
+    <button id="send-answer">제출</button>
+
+    <script>
+      var 실패 = 0;
+      $("#send-answer").on("click", function () {
+        var 답안 = $("#answer").val();
+        if (답안 != "1335") {
+          실패 += 1;
+          if (실패 >= 3) {
+            alert("멍청아");
+          } else {
+            alert("실패");
+          }
+        } else if (답안 == "1335") {
+          alert("성공");
+        }
+      });
+    </script>
+  </body>
 </html>
