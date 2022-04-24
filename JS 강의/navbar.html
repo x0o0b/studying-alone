@@ -64,19 +64,19 @@
         </button>
       </div>
     </nav>
-    
+
     <script>
       var count = 0;
-      $('.badge').on('click', function(){
+      $(".badge").on("click", function () {
         count = count + 1;
-        if(count % 2 == 1){
-          $('.badge').css('color', 'gray')
-          $('.badge').html('Light 🔄')
-        } else if(count % 2 == 0){
-          $('.badge').css('color', 'white')
-          $('.badge').html('Dark 🔄')
+        if (count % 2 == 1) {
+          $(".badge").css("color", "gray");
+          $(".badge").html("Light 🔄");
+        } else if (count % 2 == 0) {
+          $(".badge").css("color", "white");
+          $(".badge").html("Dark 🔄");
         }
-      })
+      });
     </script>
 
     <ul class="list-group">
@@ -91,6 +91,7 @@
       <h4>Shirts on Sale</h4>
       <button class="btn btn-danger" id="login">로그인</button>
     </div>
+
     <script>
       document;
       $(".navbar-toggler").on("click", function () {
@@ -104,6 +105,21 @@
       $("#close").on("click", function () {
         $(".black-bg").removeClass("show-modal");
       });
+    </script>
+
+    <div class="alert alert-danger">
+      <span id="num">5</span>초 이내 구매시 사은품 증정!
+    </div>
+    <script>
+      var num1 = 5;
+      setInterval(function () {
+        if (num1 >= 0) {
+          $("#num").html(num1);
+          num1 -= 1;
+        } else if (num1 == -1) {
+          $(".alert").hide();
+        }
+      }, 1000);
     </script>
 
     <script
