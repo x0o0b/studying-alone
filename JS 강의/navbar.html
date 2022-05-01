@@ -66,6 +66,14 @@
     </nav>
 
     <script>
+      $(window).on("scroll", function () {
+        if (window.scrollY >= 100) {
+          $(".navbar-brand").css("font-size", "20px");
+        } else {
+          $(".navbar-brand").css("font-size", "25px");
+        }
+      });
+
       var count = 0;
       $(".badge").on("click", function () {
         count = count + 1;
@@ -107,6 +115,10 @@
       });
     </script>
 
+    <div class="line1"></div>
+
+    <script></script>
+
     <div class="alert alert-danger">
       <span id="num">5</span>초 이내 구매시 사은품 증정!
     </div>
@@ -121,16 +133,17 @@
         }
       }, 1000);
     </script>
-    <div style="overflow: hidden;">
+
+    <div style="overflow: hidden">
       <div class="slide-container">
         <div class="slide-box">
-          <img src="/img/car1.png" alt="">
+          <img src="/img/car1.png" alt="" />
         </div>
         <div class="slide-box">
-          <img src="/img/car2.png" alt="">
+          <img src="/img/car2.png" alt="" />
         </div>
         <div class="slide-box">
-          <img src="/img/car3.png" alt="">
+          <img src="/img/car3.png" alt="" />
         </div>
       </div>
     </div>
@@ -141,32 +154,71 @@
     <button class="before">이전</button>
 
     <script>
-
       var 지금사진 = 0;
 
-      $('.next').on('click', function(){
+      $(".next").on("click", function () {
         지금사진 += 1;
-        $('.slide-container').css('transform', 'translateX(-'+지금사진+'00vw)');
-      })
+        $(".slide-container").css(
+          "transform",
+          "translateX(-" + 지금사진 + "00vw)"
+        );
+      });
 
-      $('.before').on('click', function(){
+      $(".before").on("click", function () {
         지금사진 -= 1;
-        $('.slide-container').css('transform', 'translateX(-'+지금사진+'00vw)');
-      })
+        $(".slide-container").css(
+          "transform",
+          "translateX(-" + 지금사진 + "00vw)"
+        );
+      });
 
-      $('.slide-1').on('click', function() {
-        지금사진 = 0
-        $('.slide-container').css('transform', 'translateX(-'+지금사진+'00vw)');
+      $(".slide-1").on("click", function () {
+        지금사진 = 0;
+        $(".slide-container").css(
+          "transform",
+          "translateX(-" + 지금사진 + "00vw)"
+        );
       });
-      $('.slide-2').on('click', function() {
-        지금사진 = 1
-        $('.slide-container').css('transform', 'translateX(-'+지금사진+'00vw)');
+      $(".slide-2").on("click", function () {
+        지금사진 = 1;
+        $(".slide-container").css(
+          "transform",
+          "translateX(-" + 지금사진 + "00vw)"
+        );
       });
-      $('.slide-3').on('click', function() {
-        지금사진 = 2
-        $('.slide-container').css('transform', 'translateX(-'+지금사진+'00vw)');
+      $(".slide-3").on("click", function () {
+        지금사진 = 2;
+        $(".slide-container").css(
+          "transform",
+          "translateX(-" + 지금사진 + "00vw)"
+        );
       });
     </script>
+
+    <div class="lorem" style="width: 200px; height: 100px; overflow-y: scroll">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro
+      perspiciatis sint rem iusto velit modi rerum fugit vitae itaque aperiam
+      quibusdam, soluta, nisi necessitatibus laudantium, dicta ducimus illum sed
+      vero.
+    </div>
+
+    <script>
+      $(".lorem").on("scroll", function () {
+        $(".lorem").scrollTop;
+        var 스크롤양 = document.querySelector(".lorem").scrollTop;
+        var 실제높이 = document.querySelector(".lorem").scrollHeight;
+        var 높이 = document.querySelector(".lorem").clientHeight;
+        if (스크롤양 + 높이 > 실제높이 - 10) {
+          alert("다읽음");
+        }
+      });
+
+      document.querySelector(".lorem").scrollHeight;
+      document.querySelector(".lorem").clientHeight;
+      window.screenY;
+    </script>
+
+    <div style="height: 1000px"></div>
 
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
