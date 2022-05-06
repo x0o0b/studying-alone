@@ -54,7 +54,14 @@
         }
       });
       $(".black-bg").on("click", function (e) {
-        $(".black-bg").removeClass("show-modal");
+        // e.target; //유저가 실제로 누른거
+        // e.currentTarget; //이벤트리스너 달린 곳
+        // e.preventDefault();
+        // e.stopPropagation();
+
+        if ($(e.target).is($(".black-bg"))) {
+          $(".black-bg").removeClass("show-modal");
+        }
       });
     </script>
 
