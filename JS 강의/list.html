@@ -57,8 +57,8 @@
         카드(i);
       }
       function 카드(e) {
-        $("h5").eq(e).html(products[e].title);
-        $("p")
+        $(".card-body h5").eq(e).html(products[e].title);
+        $(".card-body p")
           .eq(e)
           .html("가격 : " + products[e].price);
       }

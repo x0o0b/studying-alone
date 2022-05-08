@@ -56,6 +56,10 @@
       .show {
         display: block;
       }
+
+      .hide {
+        display: none;
+      }
     </style>
 
     <div class="container mt-3">
@@ -69,6 +73,34 @@
       var car2 = { name: "소나타", price: [50000, 3000, 4000] };
       $("#name").html(car2.name);
       $("#price").html(car2.price[0]);
+    </script>
+
+    <form class="container my-5 form-group">
+      <p>상품선택</p>
+      <select class="form-select mt-2">
+        <option>모자</option>
+        <option>셔츠</option>
+      </select>
+
+      <select class="form-select mt-2 hide">
+        <option>95</option>
+        <option>100</option>
+        <option>105</option>
+        <option>110</option>
+      </select>
+    </form>
+
+    <script>
+      $(".form-select")
+        .eq(0)
+        .on("change", function (e) {
+          var value = $(".form-select").eq(0).val();
+          if (value == "셔츠") {
+            $(".form-select").eq(1).removeClass("hide");
+          } else {
+            $(".form-select").eq(1).addClass("hide");
+          }
+        });
     </script>
 
     <div class="container mt-5">
