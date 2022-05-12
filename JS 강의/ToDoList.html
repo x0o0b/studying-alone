@@ -6,14 +6,67 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="ToDoList.css" />
     <link rel="stylesheet" href="/normalize.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.sandbox.google.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0"
+    />
     <title>Document</title>
   </head>
   <body>
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
+    ></script>
+
     <div class="container">
       <nav class="header">
         <h2 class="title">TODOLIST</h2>
       </nav>
-      <div class="main"></div>
+      <div class="main">
+        <div class="list">
+          <div class="icon hide">
+            <div class="button" id="check">
+              <span class="material-symbols-outlined"> done </span>
+            </div>
+            <div class="button" id="slash">
+              <span>/</span>
+            </div>
+            <div class="button" id="close">
+              <span class="material-symbols-outlined"> close </span>
+            </div>
+          </div>
+          <p class="text">vhksuhviudj</p>
+        </div>
+        <div class="list">
+          <div class="icon hide">
+            <div class="button" id="check">
+              <span class="material-symbols-outlined"> done </span>
+            </div>
+            <div class="button" id="slash">
+              <span>/</span>
+            </div>
+            <div class="button" id="close">
+              <span class="material-symbols-outlined"> close </span>
+            </div>
+          </div>
+          <p class="text">vh234234dsf</p>
+        </div>
+        <div class="list">
+          <div class="icon hide">
+            <div class="button" id="check">
+              <span class="material-symbols-outlined"> done </span>
+            </div>
+            <div class="button" id="slash">
+              <span>/</span>
+            </div>
+            <div class="button" id="close">
+              <span class="material-symbols-outlined"> close </span>
+            </div>
+          </div>
+          <p class="text">afdfxfddj</p>
+        </div>
+      </div>
       <div class="footer">
         <form>
           <input
@@ -22,7 +75,14 @@
             placeholder="텍스트를 입력해주세요..."
           />
         </form>
+        <button class="registration">
+          <p class="registration-text">등록</p>
+        </button>
       </div>
     </div>
+
+    <script></script>
+
+    <script src="ToDoList.js"></script>
   </body>
 </html>
