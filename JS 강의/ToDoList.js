@@ -1,28 +1,35 @@
-$(".list").hover(
-  function () {
-    $(this).css("background-color", "rgba(255, 255, 255, 0.3)");
-    $(this).children(".icon").removeClass("hide");
-    $(this).children(".text").addClass("hide");
-    $(this)
-      .find("#check")
-      .on("click", function () {
-        $(this).parent(".icon").next(".text").addClass("text-line");
-      });
-    $(this)
-      .find("#close")
-      .on("click", function () {
-        $(this).closest(".list").remove();
-      });
+$(".text").attr("readonly", true);
+$(document).on(
+  {
+    mouseenter: function () {
+      $(this).css("background-color", "rgba(255, 255, 255, 0.3)");
+      $(this).children(".icon").removeClass("hide");
+      $(this).children(".text").addClass("hide");
+    },
+    mouseleave: function () {
+      $(this).css("background-color", "rgba(255, 255, 255, 0.7)");
+      $(this).children(".icon").addClass("hide");
+      $(this).children(".text").removeClass("hide");
+    },
   },
-  function () {
-    $(this).css("background-color", "rgba(255, 255, 255, 0.7)");
-    $(this).children(".icon").addClass("hide");
-    $(this).children(".text").removeClass("hide");
-  }
+  ".list"
 );
-
-var val = $(".input").val();
-$(".registration").on("click", function () {
+$(document).on("click", "#check", function () {
+  $(this).parent(".icon").next(".text").toggleClass("text-line");
+});
+$(document).on("click", "#slash", function () {
+  var text = $(this).parent(".icon").next(".text");
+  $(this).parents(".list").css("background-color", "rgba(255, 255, 255, 0.7)");
+  $(this).parent(".icon").addClass("hide");
+  text.removeClass("hide");
+  text.attr("readonly", false);
+  text.click();
+});
+$(document).on("click", "#close", function () {
+  $(this).closest(".list").remove();
+});
+function action() {
+  var value = $(".input").val();
   $(".main").append(`<div class="list">
   <div class="icon hide">
     <div class="button" id="check">
@@ -35,6 +42,16 @@ $(".registration").on("click", function () {
       <span class="material-symbols-outlined"> close </span>
     </div>
   </div>
-  <p class="text">${val}</p>
+  <input class="text"></input>
 </div>`);
+  $(".text").last().val(value);
+  $(".input").val("");
+}
+$(".input").on("keyup", function (key) {
+  if (key.keyCode == 13) {
+    action();
+  }
+});
+$(".registration").on("click", function () {
+  action();
 });

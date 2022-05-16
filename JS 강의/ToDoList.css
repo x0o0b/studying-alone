@@ -3,7 +3,9 @@
 div,
 input,
 nav,
-h2, p, button {
+h2,
+p,
+button {
   box-sizing: border-box;
   margin: 0px;
   padding: 0px;
@@ -94,12 +96,13 @@ body {
 }
 
 .text-line {
-  text-decoration:line-through;
+  text-decoration: line-through;
   color: #616161;
 }
 
 .text {
   line-height: 50px;
+  text-align: center;
 }
 
 .footer {
@@ -110,11 +113,14 @@ body {
 }
 
 .input {
-  border: none;
-  background: transparent;
   width: 300px;
   height: 65px;
   margin-left: 20px;
+}
+
+input {
+  border: none;
+  background: transparent;
 }
 
 input::placeholder {
