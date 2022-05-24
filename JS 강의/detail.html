@@ -80,23 +80,36 @@
       <select class="form-select mt-2">
         <option>모자</option>
         <option>셔츠</option>
+        <option>바지</option>
       </select>
 
-      <select class="form-select mt-2 hide">
-        <option>95</option>
-        <option>100</option>
-        <option>105</option>
-        <option>110</option>
-      </select>
+      <select class="form-select mt-2 hide"></select>
     </form>
 
+    <div id="test"></div>
+
+    <script></script>
+
     <script>
+      var pants = [28, 30, 32, 34];
+      var shirts = [95, 100, 105];
+
       $(".form-select")
         .eq(0)
         .on("change", function (e) {
           var value = $(".form-select").eq(0).val();
           if (value == "셔츠") {
             $(".form-select").eq(1).removeClass("hide");
+            $(".form-select").eq(1).html("");
+            shirts.forEach(function (b) {
+              $(".form-select").eq(1).append(`<option>${b}</option>`);
+            });
+          } else if (value == "바지") {
+            $(".form-select").eq(1).removeClass("hide");
+            $(".form-select").eq(1).html("");
+            pants.forEach(function (a) {
+              $(".form-select").eq(1).append(`<option>${a}</option>`);
+            });
           } else {
             $(".form-select").eq(1).addClass("hide");
           }
