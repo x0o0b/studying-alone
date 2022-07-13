@@ -14,38 +14,37 @@ function App() {
   let [좋아요, 좋아요변경] = useState([0, 0, 0]);
   let [modal, setModal] = useState(false);
   let [title, setTitle] = useState(0);
+  let [입력값, 입력값변경] = useState('');
 
 
   return (
     <div className="App">
       <div className="black-nav">
         <div>
-          개발 blog{" "}
-          <span
-            onClick={() => {
-              let copy = [...글제목];
-              copy[0] = "여자코트 추천";
-              글제목변경(copy);
-            }}
-          >
-            변경
-          </span>
+          개발 blog
         </div>
       </div>
 
       {글제목.map(function (a, i) {
         return (
           <div className="list" key={i}>
-            <h4 onClick={()=>{setModal(!modal); setTitle(i);}}>{글제목[i]}{" "} <span onClick={() => {
+            <h4 onClick={()=>{setModal(!modal); setTitle(i);}}>{글제목[i]} <span onClick={(e) => {
+                  e.stopPropagation();
                   let copy = [...좋아요];
                   copy[i] = copy[i] + 1;
                   좋아요변경(copy);
                 }}>👍</span>{좋아요[i]}
             </h4>
-            <p>2월 17일 발행</p>
+            <div className="side">
+              <p>2월 17일 발행</p>
+              <button>삭제</button>
+            </div>
           </div>
         );
       })}
+
+      <input onChange={(e)=>{입력값변경(e.target.value)}}/>
+      <button onClick={()=>{글제목변경(글제목, 입력값)}}>등록</button>
 
       {modal == true ? <Modal title={title} 글제목변경={글제목변경} 글제목={글제목}/> : null}
     </div>
