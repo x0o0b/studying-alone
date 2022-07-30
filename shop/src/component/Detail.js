@@ -1,6 +1,13 @@
 /*eslint-disable*/
 import React from 'react';
 import { useParams } from 'react-router-dom';
+import styled from 'styled-components'
+
+let YellowBtn = styled.button`
+  background : ${ props => props.bg};
+  color : black;
+  pading : 10px;
+`
 
 function Detail(props) {
   let {id} = useParams();

@@ -5,6 +5,7 @@ import { useState } from 'react';
 import data from './data.js';
 import List from './component/List';
 import { Routes, Route, Link, useNavigate, Outlet } from 'react-router-dom';
+
 import Detail from './component/Detail';
 import Event from './component/Event';
 import About from './component/About';
@@ -20,7 +21,7 @@ function App() {
         <Navbar.Brand href="/">Navbar</Navbar.Brand>
         <Nav className="me-auto">
           <Nav.Link onClick={ ()=>{ navigate('/') } }>Home</Nav.Link>
-          <Nav.Link onClick={ ()=>{ navigate('/detail') } }>detail</Nav.Link>
+          <Nav.Link onClick={ ()=>{ navigate('/detail/1') } }>detail</Nav.Link>
           <Nav.Link onClick={ ()=>{ navigate('/about') } }>About</Nav.Link>
         </Nav>
         </Container>
