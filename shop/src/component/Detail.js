@@ -11,17 +11,17 @@ let YellowBtn = styled.button`
 
 function Detail(props) {
 
-  useEffect(()=>{
-    console.log('안녕')
-  });
-
-  
   let [alert, setAlert] = useState(false);
   let [count, setCount] = useState(0);
   let {id} = useParams();
   let findItem = props.shoes.find((x)=> x.id ==id );
-  setTimeout(()=>{{setAlert(true)}}, 2000)
-  
+   
+  useEffect(()=>{
+    let a = setTimeout(()=>{{setAlert(true)}}, 2000)
+    return ()=>{
+      clearTimeout(a)
+    }
+  }, []);
 
     return (
         <div className="container">
