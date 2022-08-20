@@ -5,13 +5,18 @@ import { useState } from 'react';
 import data from './data.js';
 import List from './component/List';
 import { Routes, Route, Link, useNavigate, Outlet } from 'react-router-dom';
+import axios from 'axios';
 
 import Detail from './component/Detail';
 import Event from './component/Event';
 import About from './component/About';
+import None from './component/none';
+import Loding from './component/Loding';
 
 function App() {
-  let [shoes] = useState(data)
+  let [shoes, setShoes] = useState(data)
+  let [count, setCount] = useState(0)
+  let [loding, setLoding] = useState(false)
   let navigate = useNavigate()
   return (
     <div className="App">
@@ -41,7 +46,33 @@ function App() {
             })}
         </div>
       </div>
-        </>}/>
+      <None count={count}/>
+      {loding ? <Loding/> : null}
+      <button id='선버튼'
+        onClick={()=>{
+          setLoding(true);
+          setCount(count + 1);
+          if(count == 0){
+            axios.get('https://codingapple1.github.io/shop/data2.json')
+            .then((data)=>{  
+              setLoding(false);       
+              let copy = [...shoes, ...data.data]
+              setShoes(copy);
+            }).catch(()=>{setLoding(false);})
+          } else if(count == 1) {
+            axios.get('https://codingapple1.github.io/shop/data3.json')
+            .then((data)=>{
+              setLoding(false);         
+              let copy = [...shoes, ...data.data]
+              setShoes(copy)
+            }).catch(()=>{setLoding(false);})
+          } if (count == 2) {
+            선버튼.style.display = "none";
+            setLoding(false);
+          }
+      }}
+      >더보기</button>
+      </>}/>
         <Route path='/detail/:id' element={<Detail shoes={shoes}/>}/>
 
         <Route path='/about' element={<About/>}>

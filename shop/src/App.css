@@ -20,6 +20,15 @@
   }
 }
 
+.start {
+  opacity: 0;
+}
+
+.end {
+  opacity: 1;
+  transition: opacity 0.8s;;
+}
+
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
