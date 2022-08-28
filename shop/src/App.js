@@ -1,7 +1,7 @@
 /*eslint-disable*/
 import './App.css';
 import { Navbar, Container, Nav } from 'react-bootstrap';
-import { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import data from './data.js';
 import List from './component/List';
 import { Routes, Route, Link, useNavigate, Outlet } from 'react-router-dom';
@@ -15,10 +15,21 @@ import None from './component/none';
 import Loding from './component/Loding';
 
 function App() {
+
+  // let obj = {name : 'kim'}
+  // localStorage.setItem('data', JSON.stringify(obj))
+  // let takeOut = localStorage.getItem('data') 
+  // console.log(JSON.parse(takeOut).name);
+
   let [shoes, setShoes] = useState(data)
   let [count, setCount] = useState(0)
   let [loding, setLoding] = useState(false)
   let navigate = useNavigate()
+
+  useEffect(()=>{
+    localStorage.setItem('watched', JSON.stringify( [] ))
+  },[]) 
+
   return (
     <div className="App">
 
@@ -27,8 +38,9 @@ function App() {
         <Navbar.Brand href="/">Navbar</Navbar.Brand>
         <Nav className="me-auto">
           <Nav.Link onClick={ ()=>{ navigate('/') } }>Home</Nav.Link>
-          <Nav.Link onClick={ ()=>{ navigate('/detail/1') } }>detail</Nav.Link>
+          <Nav.Link onClick={ ()=>{ navigate('/detail/0') } }>detail</Nav.Link>
           <Nav.Link onClick={ ()=>{ navigate('/about') } }>About</Nav.Link>
+          <Nav.Link onClick={ ()=>{ navigate('/cart') } }>Cart</Nav.Link>
         </Nav>
         </Container>
       </Navbar>

@@ -3,6 +3,8 @@ import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import styled from 'styled-components';
 import { Nav } from 'react-bootstrap';
+import { useDispatch } from 'react-redux'
+import { addcart } from '../store/store'
 
 let YellowBtn = styled.button`
   background : ${ props => props.bg};
@@ -18,6 +20,7 @@ function Detail(props) {
   let [tab, setTab] = useState(0);
   let [fade2, setFade2] = useState('')
   let findItem = props.shoes.find((x)=> x.id ==id );
+  let dispatch = useDispatch()
 
   useEffect(()=>{ setTimeout(()=>{ setFade2('end') }, 10);  return ()=>{setFade2('')} }, [])
 
@@ -26,6 +29,17 @@ function Detail(props) {
     return ()=>{
       clearTimeout(a)
     }
+  }, []);
+
+  useEffect(()=>{
+    let 꺼낸거 = localStorage.getItem('watched')
+    꺼낸거 = JSON.parse(꺼낸거)
+    꺼낸거.push(findItem.id)
+    localStorage.setItem('watched', JSON.stringify(꺼낸거))
+
+    꺼낸거 = new Set(꺼낸거)
+    꺼낸거 = Array.from(꺼낸거)
+    localStorage.setItem('watched', JSON.stringify(꺼낸거))
   }, []);
 
     return (
@@ -47,7 +61,7 @@ function Detail(props) {
               <h4 className="pt-5">{props.shoes[id].title}</h4>
               <p>{findItem.content}</p>
               <p>{findItem.price}</p>
-              <button className="btn btn-danger">주문하기</button> 
+              <button className="btn btn-danger" onClick={()=>{dispatch(addcart({id : 1, name : props.shoes[id].title, count : 1}))}}>주문하기</button> 
             </div>
           </div>
 
