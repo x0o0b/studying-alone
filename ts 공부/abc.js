@@ -54,3 +54,52 @@ var 링크1 = document.querySelectorAll('.naver');
         a.href = 'http://kakao.com';
     }
 });
+var Person = /** @class */ (function () {
+    function Person(a) {
+        this.name = a;
+    }
+    Person.prototype.함수 = function (a) {
+        console.log('안녕' + a);
+    };
+    return Person;
+}());
+var 사람1 = new Person('kim');
+var 사람2 = new Person('park');
+사람1.함수('안녕');
+var Car = /** @class */ (function () {
+    function Car(model, price) {
+        this.model = model;
+        this.price = price;
+    }
+    Car.prototype.tax = function () {
+        return this.price * 0.1;
+    };
+    return Car;
+}());
+var car1 = new Car('소나타', 3000);
+console.log(car1); //콘솔창 출력결과는 { model : '소나타', price : 3000 }
+console.log(car1.tax()); //콘솔창 출력결과는 300
+var Word = /** @class */ (function () {
+    function Word() {
+        var param = [];
+        for (var _i = 0; _i < arguments.length; _i++) {
+            param[_i] = arguments[_i];
+        }
+        var number = [];
+        var string = [];
+        param.forEach(function (i) {
+            if (typeof i === 'string') {
+                string.push(i);
+            }
+            else {
+                number.push(i);
+            }
+        });
+        this.num = number;
+        this.str = string;
+    }
+    return Word;
+}());
+var obj = new Word('kim', 3, 5, 'park');
+console.log(obj.num); //[3,5]
+console.log(obj.str); //['kim', 'park'] 
