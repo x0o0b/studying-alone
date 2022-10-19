@@ -120,3 +120,23 @@ class Word {
 let obj = new Word('kim', 3, 5, 'park');
 console.log(obj.num) //[3,5]
 console.log(obj.str) //['kim', 'park'] 
+
+type UserType = {
+    user : string,
+    comment : number[],
+    admin : boolean
+}
+
+function 함수1({user, comment, admin} :UserType) :void{
+    console.log(user, comment, admin)
+  }
+
+함수1( { user : 'kim', comment : [3,5,4], admin : false })
+
+type UserType1 = (number|string|boolean)[];
+
+function 함수2([num, name, bool] :UserType1 ) :void{
+    console.log(num, name, bool);
+}
+
+함수2([40, 'wine', false]);
