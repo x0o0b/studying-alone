@@ -1,3 +1,5 @@
+import { type } from "jquery"
+
 function sayHi(x? :string ){
     if (x) {
       console.log('안녕하세요 ' + x)
@@ -140,3 +142,161 @@ function 함수2([num, name, bool] :UserType1 ) :void{
 }
 
 함수2([40, 'wine', false]);
+
+function Hamsu (a :string|undefined) {
+    if ( a && typeof a === 'string') {
+
+    }
+}
+
+type Fish = {swim :string}
+type Bird = {fly :string}
+
+function Hamsu1(animal :Fish|Bird) {
+    if ('swim' in animal) {
+
+    }
+}
+
+type Car1 = {
+    wheel : '4개',
+    color : string
+}
+
+type Bike = {
+    wheel : '4개',
+    color : string
+}
+
+
+function Hamsu2(x :Car1|Bike) {
+    if (x.wheel === '4개') {
+        console.log('x는 Car1타입이에요');
+    }
+}
+
+function 함수3 () :never {
+    throw new Error()
+}
+
+class user {
+    name :string;
+    private familyName :string = 'kim'
+    constructor(a){
+        this.name = a + this.familyName
+    }
+
+    namechange(b){
+        this.familyName = b
+    }
+}
+
+let user1 = new user('민수')
+user1.namechange('park')
+console.log(user1)
+
+class Person1 {
+    constructor(public name :string){
+
+    }
+}
+
+let baby = new Person1('kim');
+console.log(baby)
+
+class User {
+    protected x = 10;
+}
+
+class NewUser extends User {
+    doThis(){
+        this.x = 20;
+    }
+}
+
+class User1 {
+    static x = 10;
+    y = 20;
+}
+
+let 자식 = new User1();
+// console.log(자식.x); 안됨
+console.log(User1.x); //됨
+
+// private / protected / public + static 가능
+
+class User2 {
+    static skill = 'js'
+    intro = User2.skill + ' 전문가입니다.'
+}
+let 철수 = new User2();
+console.log(철수)
+
+User2.skill = 'ts'
+
+let 철수1 = new User2();
+console.log(철수1)
+
+class User3 {
+    private static x = 10; //남들에게 보여주지 않고 수정 불가능함
+    public static y = 20; //남들에게 보여주지  않고 수정 가능
+    protected z = 30; //솔직히 몰루 ㅋㅋ
+}
+
+import {이름, 나이, Name, Car2, Bike1, 아무거나} from './a'
+let avs :Name = 'Park'
+console.log(이름);
+
+let 짜동짜 :Car2 = { wheel : 4, model : '쏘나따'}
+
+let dkanrjsk :아무거나 = function(a) {
+    console.log(a);
+}
+
+dkanrjsk({adsf : '안영'});
+
+namespace 야임스페이스 {
+    export type Dog = string;
+}
+interface Dog { name : string };    
+
+let dog1 :야임스페이스.Dog = 'bark';
+let dog2 :Dog = { name : 'paw' }
+
+function 함수4<MyType>(x :MyType[]) :MyType {
+    return x[0]
+}
+
+let a = 함수4<number>([4,2])
+let b = 함수4<string>(['4','2'])
+console.log(a)
+
+interface LengthCheck {
+    length : number
+}
+
+function 함수5<MyType1 extends LengthCheck>(x :MyType1) {
+    return x.length
+}
+
+let c = 함수5<string[]>(['100'])
+
+function Lengthcheck<type extends string|string[]>  (x :type) {
+    console.log(x.length)
+}
+Lengthcheck<string>('hello') 
+Lengthcheck<string[]>(['kim','park'])
+
+interface Animal {
+    name : string;
+    age : number 
+}
+
+let data = '{"name" : "dog", "age" : 1 }';
+
+function Animal<MyType>(x :string) :MyType {
+    return JSON.parse(x);
+}
+
+let bdf = Animal<Animal>(data);
+console.log(bdf);
