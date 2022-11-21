@@ -1,4 +1,5 @@
 import { type } from "jquery"
+// import { Age1 } from './types/common/test'
 
 function sayHi(x? :string ){
     if (x) {
@@ -69,19 +70,19 @@ var 링크1 = document.querySelectorAll('.naver');
     }
 })
 
-class Person {
-    name :string;
-    constructor(a :string){
-        this.name = a;
-    }
-    함수(a :string){
-        console.log('안녕' + a);
-    }
-}
+// class Person {
+//     name :string;
+//     constructor(a :string){
+//         this.name = a;
+//     }
+//     함수(a :string){
+//         console.log('안녕' + a);
+//     }
+// }
 
-let 사람1 = new Person('kim');
-let 사람2 = new Person('park');
-사람1.함수('안녕');
+// let 사람1 = new Person('kim');
+// let 사람2 = new Person('park');
+// 사람1.함수('안녕');
 
 class Car {
     model :string;
@@ -300,3 +301,171 @@ function Animal<MyType>(x :string) :MyType {
 
 let bdf = Animal<Animal>(data);
 console.log(bdf);
+
+let 멍멍 :[string, boolean?, number?] = ['dog', true]
+
+function 함수6(...x :[number, string]){
+    console.log(x)
+}
+함수6(1, '43');
+
+let arr = [1,2,3];
+let arr2 :[number, number, ...number[]] = [4,5, ...arr];
+
+let food :[string, number, boolean] = ['동서녹차', 4000, true];
+let food2 :[string, number, ...boolean[]] = ['동서녹차', 4000, true, false, true, true, false, true];
+
+function 함수7 (...rest :[string, boolean, ...(string|number)[] ]) {
+
+}
+
+함수7('ans', false, 25676, 344, '765', 4, 'overwatch')
+
+function 함수8 (...rest :(number|string)[]) {
+
+    let result :[string[], number[]] = [[], []];
+
+    rest.forEach((a)=>{
+        if (typeof a === 'string') {
+            result[0].push(a);
+        } else {
+            result[1].push(a)
+        }
+    })
+    return result
+}
+
+함수8('b', 5, 6, 8, 'a')
+
+let age :Age1;
+
+// console.log( abc + 1 )
+
+let 이름1 :string = '김';
+
+interface CarType {
+    model :string,
+    price :number
+}
+
+class Carr implements CarType {
+    model :string;
+    price :number = 1000;
+    constructor(a :string) {
+        this.model = a
+    }
+}
+
+let 붕붕이 = new Carr('morning');
+
+interface CarType1 {
+    model1 :string,
+    tax : (price :number) => number;
+}
+
+class carrr implements CarType1 {
+    model1; //any 타입됨
+    tax (a) { //a 파라미터는 any 타입됨 
+        return a * 0.1
+    }
+}
+
+interface StringOnly {
+    age : '20',
+    [key : string] : string
+}
+
+let user2 :StringOnly = {
+    name : 'kim',
+    age : '20',
+    location : "seoul"
+}
+interface num {
+    [key :number] : string
+}
+
+let user3 :num = {
+    0 : 'kim',
+    1 : '20',
+    2 : "seoul"
+}
+
+interface MyType {
+    'font-size' : MyType | number
+}
+
+let css :MyType = {
+    'font-size' : {
+        'font-size' : {
+            'font-size' : 14
+        }
+    }
+}
+
+interface obj1Type {
+    [key : string] : string | number
+}
+
+let obj1 :obj1Type = {
+    model : 'k5',
+    brand : 'kia',
+    price : 6000,
+    year : 2030,
+    date : '6월',
+    percent : '5%',
+    dealer : '김차장',
+  }
+
+  interface obj2Type {
+    'font-size' :  number,
+    [key : string] : obj2Type | number,
+}
+
+  let obj2 :obj2Type = {
+    'font-size' : 10,
+    'secondary' : {
+      'font-size' : 12,
+      'third' : {
+        'font-size' : 14
+      }
+    }
+  }
+
+interface Person {
+    [key :string] : number
+}
+
+type PersonKeys = keyof Person;
+
+let a1 :PersonKeys = 'name'
+
+type Car4 = {
+    color : boolean,
+    model : boolean,
+    price : boolean | number
+}
+
+type TypeChanger<MyType> = {
+    [key in keyof MyType] :string
+}
+
+type 새로운타입 = TypeChanger<Car4>
+
+type Bus = {
+    color : string,
+    model : boolean,
+    price : number
+  }
+
+type TypeChanger1<MyType> = {
+    [key in keyof MyType] :string | number
+}
+
+type NewType = TypeChanger1<Bus>
+
+type TypeChanger2<MyType, T> = {
+    [key in keyof MyType] :T;
+}
+
+type NewBus = TypeChanger2<Bus, boolean>;
+type NewBus1 = TypeChanger2<Bus, string[]>
