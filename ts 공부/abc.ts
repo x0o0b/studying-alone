@@ -337,7 +337,7 @@ function 함수8 (...rest :(number|string)[]) {
 
 함수8('b', 5, 6, 8, 'a')
 
-let age :Age1;
+// let age :Age1;
 
 // console.log( abc + 1 )
 
@@ -469,3 +469,26 @@ type TypeChanger2<MyType, T> = {
 
 type NewBus = TypeChanger2<Bus, boolean>;
 type NewBus1 = TypeChanger2<Bus, string[]>
+
+type Age2<t> = t extends string ? string : unknown ;
+let abv :Age2<string>
+let abx :Age2<number>
+
+type FirstItem<T> = T extends any[] ? T[0] : any;
+
+let age1 :FirstItem<string[]>;
+let age2 :FirstItem<number>; 
+
+type 타입추출<T> = T extends (infer R)[] ? string : unknown ;
+
+type a3 = 타입추출< () => void>
+
+type Age3<T> = T extends [string, ...any] ? T[0] : unknown;
+
+let age11 :Age3<[string, number]>;
+let age22 :Age3<[boolean, number]>; 
+
+type 타입뽑기<T> = T extends (x: infer R) => any ? R : any; 
+
+type ex1 = 타입뽑기<(x :number) => void>
+type ex2 = 타입뽑기<(x :string) => void>
