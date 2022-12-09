@@ -9,6 +9,211 @@ function sayHi(x? :string ){
     }
   } 
 
+function 내함수(x :number|string ){
+  if(typeof x === 'string') {
+    return x + '1';
+  } else {
+    return x + 1;
+  }
+} 
+
+function 니함수(x :number|string ){
+  let arr :number[] = [];
+  if(typeof x === 'number'){
+    arr[0] = x;
+  } 
+  // arr[0] = x as number;
+  // 이거 그냥 쓰지마셈
+} 
+
+function clean(x : (number | string)[]){
+  for (var i = 0; i < x.length; i++) {
+    	x[i] = Number(x[i])
+    }
+  x = x as number[];
+  return x;
+}
+
+function study(x :{subject : string | string[]}) {
+  if(typeof x.subject === 'string') {
+    return x.subject;
+  } else if(Array.isArray(x.subject)) {
+    return x.subject[x.subject.length-1];
+  } else {
+    return "없음"
+  }
+}
+type Animal6 = string|number|undefined;
+let 동물 :Animal6 = 123;
+
+type People = { name:string, age:number }
+let 사람 :People  = { name : "kim", age : 20 }
+
+const 출생지역 = {region : 'seoul'};
+출생지역.region = 'busan';
+
+type GirlFriend = { readonly name? : string }
+const 여친 : GirlFriend = {
+  name : '엠버'
+}
+// 여친.name = "ㄹㅇㄹㅇ" 안됨
+
+type Name = string;
+type Age = number;
+type Person5 = Name | Age;
+
+type PositionX = { x : number };
+type PositionY = { y : number };
+type XandY = PositionX & PositionY;
+let 좌표:XandY = {x:1, y:2};
+// 영상 10:21부터
+
+type Exam1 = { ex : string };
+type Exam2 = { ex : string };
+type Exam3 = Exam1&Exam2;
+
+type Ang = { color ?: string, size : number, readonly position : number[] };
+
+let AngTest :Ang = {
+  size : 123,
+  position : [1,2,3]
+}
+
+type PersonalityInformation = { name : string, phone : number, email : string};
+type 개인정보2 = { adult : boolean};
+type Personality정보3 = PersonalityInformation & 개인정보2;
+let 박윤성 : "대머리" & "탈모";
+function 함수9(a : "hello") {
+
+}
+함수9("hello")
+
+interface Student { name : string }
+interface Teacher extends Student {  age : number }
+let 학생 :Student = { name : 'kim'}
+let 선생 :Teacher = { name : 'kim' , age : 100};
+
+type Animal1 = { name : string }
+type Cat = { age : number } & Animal
+
+// interface는 중복선언 가능
+//type은 중복선언 불가능
+// extends 사용할 때 중복속성 잡아줌
+// & 사용할 땐 중복속성 안잡아줌
+
+interface ITem { 
+  brand : string,
+  serialNumber : number,
+  model : string[]
+}
+
+let 상품 :ITem = { 
+  brand : 'Samsung', 
+  serialNumber : 1360, 
+  model : ['TV', 'phone'] 
+}
+
+interface Basket {
+  product : string,
+  price : number
+}
+
+interface NewBasket extends Basket {
+  card : false
+}
+
+let 장바구니 :Basket[] = [ 
+  { product : '청소기', price : 7000 }, 
+  { product : '삼다수', price : 800 } 
+] 
+
+interface Math {
+  plus : (a:number, b:number) => number
+  minus : (a:number, b:number) => number
+}
+
+let math :Math = {
+  plus(a, b){
+    return a + b;
+  },
+  minus(a, b){
+    return a - b;
+  }
+}
+
+function 전무머하기(...a :number[]) {
+  console.log(a);
+}
+
+전무머하기(1,2,3,4,5);
+
+let arr3 = [1,2,3];
+let arr4 = [4, 5];
+let arr5 = [...arr3, ...arr4];
+console.log(arr3);
+
+let [변수1, 변수2] = ['안녕', 100];
+let { student, age } = { student : true, age : 20};
+
+let 오브젝트 = { student : true, age : 20 }
+
+function 오브젝트1({student , age} :{ student : boolean, age : number }){
+  console.log(student, age)  
+}
+
+오브젝트1({ student : true, age : 20 })
+
+function MaxNum(...a :number[]) {
+    let ex :number = 0;
+    a.forEach(i => {
+      if(i > ex) {
+        ex = i;
+      }
+    });
+    return ex;
+  }
+  
+  console.log(MaxNum(3,4,5,6,7));
+  
+  class User7 {
+    private static x = 10;
+    public static y = 20;
+  
+    static addOne(a :number){
+      User7.x += a
+    }
+  
+    static printX(){
+      console.log(User7.x)
+    }
+  }
+  User7.addOne(3) //이렇게 하면 x가 3 더해져야함
+  User7.addOne(4) //이렇게 하면 x가 4 더해져야함
+  
+  class Square{
+    constructor (public width :number, public height :number) {
+    }
+    draw(color :string){
+      let a = Math.random();
+      let square = `<div style="position:relative;
+        top:${a * 300}px;
+        left:${a * 400}px;
+        width:${this.width}px;
+        height:${this.width}px;
+        background:${color}"></div>`;
+      document.body.insertAdjacentHTML('beforeend', square)
+    }
+  }
+  
+  let 네모 = new Square(80, 80);
+  네모.draw('green')
+  네모.draw('blue')
+  네모.draw('red')
+  네모.draw('yellow')
+  네모.draw('orange')
+  네모.draw('pink')
+  네모.draw('purple')
+
 // function jari(a?:number|string){
 //     return a.toString().length
 // }
@@ -244,7 +449,7 @@ class User3 {
     protected z = 30; //솔직히 몰루 ㅋㅋ
 }
 
-import {이름, 나이, Name, Car2, Bike1, 아무거나} from './a'
+import {이름, 나이, Car2, Bike1, 아무거나} from './a'
 let avs :Name = 'Park'
 console.log(이름);
 
