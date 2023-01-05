@@ -104,4 +104,72 @@ void main(List<String> args) {
   numbers.add(1);
   numbers.add(1);
   print(numbers); // 출력결과 {1, 2, 3, 4}
+
+  /// #3.0 Defining a Function
+
+  print(plus(32, 12)); // 출력결과 44
+  print(minus(32, 12)); // 출력결과 20
+
+  /// #3.1 Named Parameters
+
+  print(sayHello(name: "hoseon", age: 19, country: "Korea"));
+  print(sayHello2(name: "hoseon", age: 19, country: "Korea"));
+
+  /// #3.3 Optional Positional Parameters
+  var result = sayHello3("towa", 17);
+  print(result);
+
+  /// #3.4 QQ Operator
+  capitalizeName('towa');
+  capitalizeName(null);
+
+  String? instrument;
+  instrument ??= 'guitar';
+  instrument = null;
+  instrument ??= 'violet';
+  print(instrument);
+
+  /// #3.5 Typedef
+  print(reverseListOfNumbers([1, 2, 3]));
+}
+
+/// #3.0 Defining a Function
+num plus(num a, num b) {
+  return a + b;
+}
+
+// 하나의 표현식만 포함하는 함수의 경우 단축 구문을 사용할 수 있다.
+num minus(num a, num b) => a - b;
+
+/// #3.1 Named Parameters
+String sayHello({
+  String name = 'towa',
+  int age = 17,
+  String country = 'japen',
+}) {
+  return "${name} / ${age} / ${country}";
+}
+
+String sayHello2({
+  required String name,
+  required int age,
+  required String country,
+}) {
+  return "${name} / ${age} / ${country}";
+}
+
+/// #3.3 Optional Positional Parameters
+String sayHello3(String name, int age, [String? country = ""]) {
+  return 'Hello ${name}, You are ${age} from the ${country}';
+}
+
+/// /// #3.4 QQ Operator
+String capitalizeName(String? name) => name?.toUpperCase() ?? 'ANON';
+
+/// #3.5 Typedef
+typedef ListOfInt = List<int>;
+
+List<int> reverseListOfNumbers(List<int> list) {
+  var reversed = list.reversed;
+  return reversed.toList();
 }
