@@ -131,6 +131,57 @@ void main(List<String> args) {
 
   /// #3.5 Typedef
   print(reverseListOfNumbers([1, 2, 3]));
+
+  // #4.0 Your First Dart Class
+  //var player1 = Player();
+  //player2.sayHello();
+
+  // #4.1 Constructors
+  //var player2 = Player('towa', 9999);
+  //player2.sayHello();
+
+  // #4.2 Named Constructor Parameters
+  // var player3 = Player(
+  //   name: 'towa',
+  //   xp: 9999,
+  //   team: 'blue',
+  //   age: 17,
+  // );
+  // player3.sayHello();
+
+  // #4.3 Named Constructors
+  // var bluePlayer = Player.createBluePlayer(
+  //   name: 'towa',
+  //   age: 17,
+  // );
+  // var redPlayer = Player.createRedPlayer(
+  //   name: 'towa',
+  //   age: 17,
+  // );
+
+  // #4.4 Recap
+  var apiDate = [
+    {
+      "name": 'towa',
+      'team': 'red',
+      'xp': 0,
+    },
+    {
+      "name": 'marin',
+      'team': 'red',
+      'xp': 0,
+    },
+    {
+      "name": 'ayame',
+      'team': 'red',
+      'xp': 0,
+    },
+  ];
+
+  apiDate.forEach((playerJson) {
+    var player = Player.fromJson(playerJson);
+    player.sayHello();
+  });
 }
 
 /// #3.0 Defining a Function
@@ -172,4 +223,47 @@ typedef ListOfInt = List<int>;
 List<int> reverseListOfNumbers(List<int> list) {
   var reversed = list.reversed;
   return reversed.toList();
+}
+
+// #4.0 Your First Dart Class
+// #4.1 Constructors
+// #4.2 Named Constructor Parameters
+// #4.3 Named Constructors
+
+class Player {
+  final String name;
+  int xp;
+  String team;
+
+  Player.fromJson(Map<String, dynamic> playerJson)
+      : name = playerJson['name'],
+        team = playerJson['team'],
+        xp = playerJson['xp'];
+
+  // Player({
+  //   required this.name,
+  //   required this.xp,
+  //   required this.team,
+  //   required this.age,
+  // });
+
+  // Player.createBluePlayer({
+  //   required String name,
+  //   required int age,
+  // })  : this.age = age,
+  //       this.name = name,
+  //       this.team = 'blue',
+  //       this.xp = 0;
+
+  // Player.createRedPlayer({
+  //   required String name,
+  //   required int age,
+  // })  : this.age = age,
+  //       this.name = name,
+  //       this.team = 'red',
+  //       this.xp = 0;
+
+  void sayHello() {
+    print("Hi my name is $name");
+  }
 }
